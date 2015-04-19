@@ -9,13 +9,13 @@ $(function(){
 			event.preventDefault();
 			// get values from FORM
 			var busRoute = $("select#busRoute").val();
-			var inOut = $('input#inOut:checked').val();
+			var inOut = $("input[name=inOut]:checked").val();
 			var year = $("select#year").val();
 			var month = $("select#month").val();
-			var metric = $("select#actual-vs-scheduled").val();
+			var metric = $("select#metric").val();
 
 			$.ajax({
-				url: "././server-side/bus-route-form.php",
+				url: "../../server-side/bus-route-form.php",
 				type: "POST",
 				data: {
 					busRoute: busRoute,
@@ -53,7 +53,7 @@ $(function(){
     });
 });
 
-/*When clicking on Full hide fail/success boxes */
+/*Function to close out the graph. Not implemented at the moment */
 $('#name').focus(function() {
     $('#success').html('');
 });
