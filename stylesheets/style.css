@@ -4,6 +4,11 @@ body {
   background: transparent;
 }
 
+#authors{
+    color:#999;
+    font-weight:200
+}
+
 #about{
 	font-size: 18px;
 }
