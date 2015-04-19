@@ -8,14 +8,9 @@ body {
 	font-size: 18px;
 }
 
-#footer{
-  margin-top: 20px;
-  margin-bottom: -20px;
-  border-radius: 0 !important;
-}
-
 /* Footer and Social Buttons */
 footer {
+    margin-top: 20px;
     padding: 25px 0;
     text-align: center;
 }

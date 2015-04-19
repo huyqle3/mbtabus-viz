@@ -38,14 +38,36 @@
 		</div>
 	</div>
 
-	<div class="container" style="margin:50px">
+	<div class="container" style="margin:50px; margin-bottom: 90px">
 		<p id="about">
 			Use MBTA-provided data to generate a comparison of on-time bus performance before and after the implementation of significant MBTA service changes that went into effect over the course of spring and summer 2013 (specific dates, by route, are available).
 		</p>
 	</div>
 
-	<section id="contact">
+	<div class="container" style="margin:50px">
+		<div class ="row">
+			<div class="col-md-7">
+				<h2>The Buses</h2>
+				<p id="about">
+					The big question is whether the MBTA key bus route changes during 2013 benefitted or hurt the on-time bus performance. The following tool provides the ability to compare metrics of the MBTA key bus routes with the corresponding previous or next year. Extra options allow for further customization.
+				</p>
+			</div>
+			<div class="col-md-5">
+				<a href="#headway-example" data-toggle="modal"><img class="thumbnail" src="images/headway-example.png" height ="200px"></a>
+			</div>
+		</div>
+	</div>
+
+	<div class ="modal fade" id ="headway-example" role ="dialog">
+		<div class ="container text-center" style="margin-top: 50px">
+			<img class="img-responsive" src="images/headway-example.png">
+		</div>
+	</div>
+
+	<section id="bus-route">
 		<div class ="container">
+			<h2>Metric comparison</h2>
+			</br>
 			<div class="row">
 				<div class="col-md-6">
 					<form name ="sendForm" id = "route-selection" novalidate>
@@ -144,5 +166,7 @@
         </div>
     </footer>
 
+    <script type="text/javascript" src="javascripts/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
 </body>
 </html>
