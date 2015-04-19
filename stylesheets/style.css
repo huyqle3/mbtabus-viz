@@ -13,9 +13,56 @@ body {
 	font-size: 18px;
 }
 
+/* Graphs */
+.chart rect {
+  fill: green;
+}
+
+.chart text {
+  fill: white;
+  font: 10px tahoma;
+  text-anchor: end;
+}
+
+path { 
+    fill: none;
+} 
+.headway .axis path,
+.headway .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+.input-color {
+    position: relative;
+}
+.input-color input {
+    padding-left: 10px;
+}
+.input-color .color-box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.line-chart .axis path,
+.line-chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.line-chart .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2.5px;
+}
+
 /* Footer and Social Buttons */
 footer {
-    margin-top: 20px;
     padding: 25px 0;
     text-align: center;
 }
