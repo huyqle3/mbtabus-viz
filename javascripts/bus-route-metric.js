@@ -27,10 +27,9 @@ $(function(){
 				cache: false,
 				success: function(){
 					// Success message
-					$("#success").empty();
+					clearAll();
 					$('#success').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 					console.log("../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
-					clearAll();
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
 						runTimeBar(busRoute, inOut, year, month, bar);
@@ -70,27 +69,12 @@ $(function(){
 });
 
 function clearAll(){
+	$("#success").empty();
 	$(".chart").empty();
-	$(".line-chart").empty();
-	$(".headway").empty();
 }
-
-/* Sample reposition function
-function reposition(){
-	$('.chart').css({
-    	position: 'relative'
-	});
-	$('.line-chart').css({
-    	position: 'relative'
-	});
-	$('.headway').css({
-    	position: 'absolute',
-    	top: '1000px'
-	});
-}
-*/
 
 function runTimeBar(busRoute, inOut, year, month, metric){
+
 	var width = 440,
     barHeight = 12;
 
@@ -113,20 +97,25 @@ function runTimeBar(busRoute, inOut, year, month, metric){
 
 	  bar.append("rect")
 	      .attr("width", function(d) { return x(d.close); })
-	      .attr("height", barHeight - 1);
+	      .attr("height", barHeight - 1)
+	      .style("fill", "green");
 
 	  bar.append("text")
 	      .attr("x", function(d) { return x(d.close) - 3; })
 	      .attr("y", barHeight / 2)
 	      .attr("dy", ".35em")
-	      .text(function(d) { return d.close; });
+	      .text(function(d) { return d.close; })
+	      .style({"fill": "white", "font": "10px tahoma", "text-anchor": "end"});
 
 	  bar.append("text")
 	      .attr("x", 30)
 	      .attr("y", barHeight / 2)
 	      .attr("dy", ".35em")
-	      .text(function(d) { return d.date; });
+	      .text(function(d) { return d.date; })
+	      .style({"fill": "white", "font": "10px tahoma", "text-anchor": "end"});
 	});
+
+	$("path").css("fill", "none");
 }
 
 function runTimeLine(busRoute, inOut, year, month, metric){
@@ -143,12 +132,10 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	var y = d3.scale.linear()
 	    .range([height, 0]);
 
-
 	var xAxis = d3.svg.axis()
 	    .scale(x)
 	    .ticks(d3.time.hours, 1)
 	    .orient("bottom");
-
 
 	var yAxis = d3.svg.axis()
 	    .scale(y)
@@ -158,7 +145,7 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	    .x(function(d) { return x(d.date); })
 	    .y(function(d) { return y(d.close); });
 
-	var svg = d3.select(".line-chart").append("svg")
+	var svg = d3.select(".chart")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -177,11 +164,13 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	svg.append("g")
 	    .attr("class", "x axis")
 	    .attr("transform", "translate(0," + height + ")")
+	    .style({"stroke-width": "0.1px", "stroke": "#000", "shape-rendering": "crispEdges"})
 	    .call(xAxis);
 
 	svg.append("g")
 	    .attr("class", "y axis")
 	    .call(yAxis)
+	    .style({"stroke-width": "0.1px", "stroke": "#000", "shape-rendering": "crispEdges"})
 	    .append("text")
 	    .attr("transform", "rotate(-90)")
 	    .attr("y", 10)
@@ -192,12 +181,13 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	svg.append("path")
 	    .datum(data)
 	    .attr("class", "line")
-	    .attr("d", line);
+	    .attr("d", line)
+	    .style({"fill": "none", "stroke": "steelblue", "stroke-width": "2.5px"});
 	});
 }
 
 function actualVsScheduled(busRoute, inOut, year, month, metric){
-	//var width = 2200, barHeight = 12;
+	// var width = 2200, barHeight = 12;
 	var width = 1000, barHeight = 12;
 
 	var x = d3.scale.linear()
@@ -221,24 +211,27 @@ function actualVsScheduled(busRoute, inOut, year, month, metric){
 
 	  bar.append("rect")
 	      .attr("width", function(d) { return x(d.close); })
-	      .attr("height", barHeight - 1);
+	      .attr("height", barHeight - 1)
+	      .style("fill", "green");
 
 	  bar.append("text")
 	      .attr("x", function(d) { return x(d.close) - 1; })
 	      .attr("y", barHeight / 2)
 	      .attr("dy", ".35em")
-	      .text(function(d) { return d.close; });
+	      .text(function(d) { return d.close; })
+	      .style({"fill": "white", "font": "10px tahoma", "text-anchor": "end"});
 
 	  bar.append("text")
 	      .attr("x", 25)
 	      .attr("y", barHeight / 2)
 	      .attr("dy", ".35em")
-	      .text(function(d) { return d.date; });
+	      .text(function(d) { return d.date; })
+	      .style({"fill": "white", "font": "10px tahoma", "text-anchor": "end"});
 	});
 }
 
 function headway(busRoute, inOut, year, month, metric){
-	$('.headway').html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:200px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:200px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
+	$('#success').html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:200px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:200px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
@@ -272,7 +265,7 @@ function headway(busRoute, inOut, year, month, metric){
 		return x(d.mytime);} })
 	    .y(function(d) { return y(d.AvgSch); });
 		
-	var svg = d3.select(".headway").append("svg")
+	var svg = d3.select(".chart")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -326,21 +319,25 @@ function headway(busRoute, inOut, year, month, metric){
 	        .attr("class", "line")	
 	        .attr("d", valueline(data))
 			.attr("stroke-width", 2)
-			.attr("stroke", 'black');
+			.attr("stroke", 'black')
+			.style("fill", "none");
 		//Add the valueline2 path
 		svg.append("path")		
 			.attr("class","line")
 	        .attr("d", valueline2(data))
 			.style("stroke-dasharray", ("3, 3"))
 			.attr("stroke-width", 3)
-			.attr("stroke", 'red');
+			.attr("stroke", 'red')
+			.style("fill", "none");
 
 	  svg.append("g")
 	      .attr("class", "x axis")
 	      .attr("transform", "translate(0," + height + ")")
+	      .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	      .call(xAxis);
 	  svg.append("g")
 	      .attr("class", "y axis")
+	      .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	      .call(yAxis)
 	    .append("text")
 	      .attr("transform", "rotate(-90)")
