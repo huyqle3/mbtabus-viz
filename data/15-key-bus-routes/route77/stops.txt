@@ -1,0 +1,35 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+7922,Arlington Heights Busway,42.424820,-71.185341
+17922,Massachusetts Ave @ Park Ave,42.424244,-71.183189
+2250,Massachusetts Ave @ Daniels St,42.424122,-71.179413
+2251,Massachusetts Ave @ Appleton St,42.423569,-71.176262
+2252,Massachusetts Ave @ Quincy St,42.421783,-71.172699
+2254,Massachusetts Ave @ Menotomy Rd,42.420376,-71.170082
+2255,Massachusetts Ave @ Mt Vernon St,42.418877,-71.167130
+2256,Massachusetts Ave @ Lockeland Ave,42.417294,-71.163643
+2257,Massachusetts Ave @ Newman Way,42.416744,-71.160538
+2258,Massachusetts Ave @ Academy St,42.416191,-71.156708
+2259,Massachusetts Ave @ Library Way,42.415821,-71.154503
+2260,Massachusetts Ave @ Broadway,42.414272,-71.151070
+2261,Massachusetts Ave @ Avon Pl,42.413128,-71.149681
+2262,Massachusetts Ave @ Wyman Terr,42.411491,-71.148483
+2263,Massachusetts Ave @ Linwood St,42.409538,-71.147240
+2264,260 Massachusetts Ave,42.407677,-71.144814
+2265,Massachusetts Ave @ Lake St,42.405766,-71.142456
+2266,Massachusetts Ave @ Milton St,42.404163,-71.140411
+22661,Massachusetts Ave @ Thorndike St,42.402676,-71.138481
+22671,Massachusetts Ave @ Lafayette St,42.401638,-71.137321
+2268,Massachusetts Ave @ Columbus Ave,42.400497,-71.135315
+2269,Massachusetts Ave @ Cottage Park Ave,42.399437,-71.133125
+2270,Massachusetts Ave @ Cedar St,42.397953,-71.131119
+2296,Massachusetts Ave @ Norris St,42.395859,-71.128746
+2297,Massachusetts Ave @ Hollis St,42.394341,-71.127037
+2298,Massachusetts Ave @ Rindge Ave,42.392666,-71.125198
+2299,Massachusetts Ave @ Walden St,42.391163,-71.123207
+2300,Massachusetts Ave opp Beech St,42.389912,-71.120712
+12301,Massachusetts Ave @ Upland Rd,42.388229,-71.119545
+2304,Massachusetts Ave @ Linnaean St,42.384514,-71.119591
+2305,Massachusetts Ave @ Shepard St,42.381641,-71.119934
+2307,Massachusetts Ave @ Waterhouse St,42.377811,-71.120285
+2076,Harvard Lower Busway @ Red Line,42.373362,-71.118956
+32549,Eliot St @ Bennett St,42.372536,-71.121780

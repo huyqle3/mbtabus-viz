@@ -1,0 +1,25 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+8178,Watertown Sq Terminal,42.365437,-71.185501
+2048,Mt Auburn St @ Main St,42.365490,-71.183731
+2049,Mt Auburn St @ Patten St,42.366566,-71.181183
+2050,Mt Auburn St @ Parker St,42.367935,-71.178734
+2051,Mt Auburn St  @ Franklin St,42.368385,-71.176094
+2052,Mt Auburn St @ Walnut St,42.368946,-71.173981
+2054,Mt Auburn St @ Boylston St,42.370003,-71.170731
+2056,Mt Auburn St @ Winthrop St,42.369923,-71.167328
+2057,Mt Auburn St @ School St,42.370621,-71.164818
+2058,Mt Auburn St @ Adams St,42.370399,-71.161446
+2060,Mt Auburn St @ Bigelow Ave,42.371185,-71.157959
+2061,Mt Auburn St opp Keenan St,42.372822,-71.154724
+2062,Mt Auburn St @ Ralph Piteri Terr,42.373772,-71.152275
+2064,Mt Auburn St opp Homer Ave,42.374908,-71.147888
+2065,Mt Auburn St @ Aberdeen Ave,42.375240,-71.145462
+2066,Mt Auburn St opp Brattle St,42.375305,-71.143860
+2067,Mt Auburn St @ Coolidge Ave,42.374897,-71.139854
+2068,Mt Auburn St opp Traill St,42.374989,-71.136551
+2070,Mt Auburn St @ Mt Auburn Hospital,42.374771,-71.133232
+2071,Mt Auburn St opp Sparks St,42.374626,-71.130714
+2073,Mt Auburn St @ Brewer St,42.373955,-71.124748
+2074,Mt Auburn St @ University Rd,42.373356,-71.123230
+20761,Harvard Upper Busway @ Red Line,42.373362,-71.118956
+8178,Watertown Sq Terminal,42.365437,-71.185501

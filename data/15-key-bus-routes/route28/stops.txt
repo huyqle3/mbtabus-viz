@@ -1,0 +1,42 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+17862,Ruggles Station - Lane 1,42.336377,-71.088961
+11257,Malcolm X Blvd @ King St,42.331196,-71.092690
+1259,Malcolm X Blvd opp Madison Park HS,42.330975,-71.089859
+11323,Malcolm X Blvd opp O'Bryant HS,42.330605,-71.088417
+11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
+64000,Dudley Station,42.329544,-71.083984
+399,Warren St opp Kearsage Ave,42.327385,-71.083313
+40001,Warren St @ Dabney Pl,42.325352,-71.083397
+401,Warren St @ Walnut Ave,42.323921,-71.082886
+404,Warren St opp Waverly St,42.321537,-71.082100
+405,Warren St opp Woodbine St,42.319931,-71.081627
+406,Warren St @ ML King Blvd,42.318134,-71.082123
+407,Warren St @ Townsend St,42.316227,-71.083031
+410,Warren St @ Waumbeck St,42.313263,-71.083656
+411,Warren St @ Brunswick St,42.311707,-71.082985
+412,Warren St @ Crawford St,42.310421,-71.083260
+413,Blue Hill Ave @ Wayne St,42.306889,-71.084419
+414,Blue Hill Ave @ Seaver St,42.305649,-71.084755
+415,Blue Hill Ave opp Columbia Rd - Franklin Park Zoo,42.303295,-71.085373
+416,Blue Hill Ave opp Glenway St,42.301830,-71.085876
+417,Blue Hill Ave @ American Legion Hwy,42.297749,-71.087227
+419,Blue Hill Ave @ Angell St,42.295593,-71.087914
+1706,Blue Hill Ave @ Harvard St,42.294678,-71.088188
+1708,Blue Hill Ave @ Paxton St,42.292255,-71.088997
+1709,Blue Hill Ave @ Greenock St,42.289639,-71.089874
+1710,Blue Hill Ave @ Johnston Rd,42.287167,-71.090660
+11712,Blue Hill Ave @ Morton St,42.284142,-71.091675
+1713,Blue Hill Ave @ Goodale Rd,42.282425,-71.092285
+1714,Blue Hill Ave @ Wellington Hill St,42.279564,-71.093193
+1716,Blue Hill Ave @ Mattapan St,42.276585,-71.093719
+1717,Blue Hill Ave @ Almont St,42.274185,-71.093803
+1718,Blue Hill Ave @ Woodhaven St,42.273151,-71.093819
+11719,Blue Hill Ave opp Babson St,42.270168,-71.093910
+1720,Blue Hill Ave @ Mattapan Sq,42.268761,-71.093956
+1721,Blue Hill Ave @ River St,42.267151,-71.093620
+18511,Mattapan Station - South Busway,42.267762,-71.092241
+17861,Ruggles Sta - Upper Level,42.336377,-71.088961
+11719,Blue Hill Ave opp Babson St,42.270168,-71.093910
+1720,Blue Hill Ave @ Mattapan Sq,42.268761,-71.093956
+1721,Blue Hill Ave @ River St,42.267151,-71.093620
+18511,Mattapan Station - South Busway,42.267762,-71.092241

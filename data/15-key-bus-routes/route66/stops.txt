@@ -1,0 +1,37 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+926,Brighton Ave @ Cambridge St,42.353348,-71.136688
+927,Brighton Ave @ Allston St,42.353168,-71.134552
+928,Brighton Ave @ Harvard Ave,42.352852,-71.132195
+1302,Harvard Ave @ Commonwealth Ave,42.350620,-71.131248
+11302,Harvard St @ Verndale St,42.348389,-71.129539
+1304,Harvard St @ Coolidge St,42.345707,-71.127663
+1306,Harvard St @ Shailer St,42.343975,-71.124519
+1308,Harvard St @ Beacon St,42.342213,-71.121201
+1309,Harvard St @ Marion St,42.339638,-71.121040
+1310,Harvard St @ Harris St,42.337914,-71.121506
+1311,Harvard St @ School St,42.335831,-71.120491
+1313,Harvard St @ Washington St,42.332973,-71.118774
+1555,Washington St @ Walnut,42.331585,-71.116158
+1314,Huntington Ave @ S Huntington Ave,42.331821,-71.112183
+1315,Huntington Ave @ Parker Hill Ave,42.333092,-71.109680
+1317,Huntington Ave opp Fenwood Rd,42.334229,-71.104609
+1319,Tremont St opp Wigglesworth St,42.333786,-71.103912
+1320,Tremont St @ Saint Alphonsus St,42.332855,-71.101265
+1322,Tremont St @ Sewall St,42.331818,-71.097816
+1323,Tremont St @ Columbus Ave,42.331397,-71.095451
+11257,Malcolm X Blvd @ King St,42.331196,-71.092690
+1259,Malcolm X Blvd opp Madison Park HS,42.330975,-71.089859
+11323,Malcolm X Blvd opp O'Bryant HS,42.330605,-71.088417
+11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
+64000,Dudley Station,42.329544,-71.083984
+11323,Malcolm X Blvd opp O'Bryant HS,42.330605,-71.088417
+11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
+64000,Dudley Station,42.329544,-71.083984
+2560,N Harvard St @ Kingsley St,42.361893,-71.130333
+2561,N Harvard St @ Western Ave,42.363590,-71.129143
+2564,N Harvard St opp Harvard Stadium Gate 2,42.367081,-71.124825
+25641,JFK St @ Eliot St,42.371487,-71.120949
+2168,Massachusetts Ave @ Johnston Gate,42.375130,-71.118515
+22549,Harvard Sq @ Garden St - Dawes Island,42.375301,-71.119240
+11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
+64000,Dudley Station,42.329544,-71.083984

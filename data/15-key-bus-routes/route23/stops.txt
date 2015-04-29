@@ -1,0 +1,32 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+334,Ashmont Station,42.284652,-71.064489
+367,Talbot Ave @ Dorchester Ave,42.286095,-71.064354
+369,Talbot Ave @ Welles Ave,42.289135,-71.067039
+371,Talbot Ave @ Centre St,42.290169,-71.070633
+457,Washington St @ Kenwood St,42.291763,-71.071640
+458,Washington St @ Melville Ave,42.293404,-71.071785
+460,Washington St @ Park St,42.295593,-71.072052
+461,Washington St opp Algonquin St,42.297607,-71.072533
+463,Washington St @ Bowdoin St,42.299503,-71.073723
+465,Washington St @ Vassar St.,42.300900,-71.075905
+467,Washington St opp Erie St,42.303387,-71.078468
+473,Washington St @ Columbia Rd,42.305298,-71.080322
+469,Washington St @ Joe L Smith Way,42.306164,-71.081352
+470,Washington St @ Blue Hill Ave,42.307571,-71.082558
+386,Warren St @ Sunderland St,42.310509,-71.083160
+387,Warren St @ Intervale St,42.312317,-71.082977
+388,Warren St @ Gaston St,42.313454,-71.083557
+390,Warren St @ Quincy St,42.316257,-71.082893
+392,Warren St @ Maywood St,42.318157,-71.081787
+393,Warren St @ Woodbine St,42.319958,-71.081383
+394,Warren St @ Waverly St,42.321587,-71.081810
+395,Warren St @ Whiting St,42.323910,-71.082603
+396,Warren St @ Moreland St,42.325733,-71.083237
+21151,Warren St @ Kearsarge Ave,42.327351,-71.083023
+64000,Dudley Station,42.329544,-71.083984
+485,Washington St @ Southern Ave,42.291447,-71.071762
+426,Talbot Ave @ Lithgow St,42.289944,-71.069977
+428,Talbot Ave @ Welles Ave,42.288963,-71.066971
+430,Talbot Ave @ Dorchester Ave,42.286037,-71.064499
+334,Ashmont Station,42.284652,-71.064489
+17861,Ruggles Sta - Upper Level,42.336377,-71.088961

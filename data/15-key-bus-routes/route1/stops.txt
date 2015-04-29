@@ -1,0 +1,29 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+110,Massachusetts Ave @ Holyoke St,42.373260,-71.118126
+2168,Massachusetts Ave @ Johnston Gate,42.375130,-71.118515
+2166,Quincy St @ Broadway opp Fogg Museum,42.374683,-71.114571
+2167,Quincy St @ Harvard St,42.372402,-71.115204
+66,Mt Auburn St @ DeWolfe St,42.370926,-71.115967
+67,Mt Auburn St @ Putnam Ave,42.370045,-71.113518
+68,Massachusetts Ave @ Bay St,42.368950,-71.110428
+69,Massachusetts Ave @ Hancock St,42.368351,-71.108932
+71,Massachusetts Ave @ Pleasant St,42.366718,-71.106102
+72,Massachusetts Ave @ Pearl St,42.364914,-71.103073
+73,Massachusetts Ave @ Sidney St,42.362804,-71.099510
+74,Massachusetts Ave @ Albany St,42.360706,-71.096016
+75,84 Massachusetts Ave,42.358940,-71.093628
+77,Massachusetts Ave @ Beacon St,42.350883,-71.089638
+79,Massachusetts Ave @ Newbury St,42.347888,-71.087903
+80,Massachusetts Ave opp Christian Science Ctr,42.344364,-71.086456
+82,Massachusetts Ave @ Huntington Ave,42.342480,-71.084702
+187,Massachusetts Ave @ Massachusetts Ave Station,42.341512,-71.083423
+83,Massachusetts Ave @ Columbus Ave,42.340622,-71.081947
+84,Massachusetts Ave @ Tremont St,42.339073,-71.080299
+59,Massachusetts Ave @ Washington St,42.336296,-71.076942
+854,Massachusetts Ave @ Harrison Ave,42.334747,-71.075111
+856,Massachusetts Ave @ Albany St,42.333538,-71.073692
+10100,Albany St @ Randall St,42.331676,-71.076347
+10101,Melnea Cass Blvd @ Harrison Ave,42.332066,-71.079147
+62,Washington St @ Williams St,42.332047,-71.081741
+63,Washington St @ Ruggles St,42.331036,-71.082878
+64,Dudley Station,42.329788,-71.083885

@@ -1,0 +1,37 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+899,Kenmore Station Busway,42.348949,-71.095169
+951,Commonwealth Ave @ Silber Way,42.349457,-71.100739
+952,Commonwealth Ave @ Granby St,42.349831,-71.103798
+953,Commonwealth Ave @ St Marys St,42.350163,-71.106628
+954,Commonwealth Ave @ University Rd,42.350452,-71.108833
+956,Commonwealth Ave @ Buick St,42.351311,-71.115936
+958,Commonwealth Ave @ Babcock St,42.351971,-71.121445
+959,1079 Commonwealth Ave,42.352222,-71.123512
+960,19 Brighton Ave,42.352432,-71.126221
+962,Brighton Ave @ Linden St,42.352909,-71.130287
+964,Brighton Ave opp Quint St,42.353344,-71.133873
+966,Cambridge St @ N Beacon St,42.353443,-71.137947
+967,Cambridge St @ Saunders St,42.352089,-71.141708
+969,Cambridge St @ Dustin St,42.350864,-71.145538
+970,Cambridge St @ Sparhawk St,42.350124,-71.147346
+971,Cambridge St @ Elko St,42.349442,-71.149223
+972,Washington St @ Waldo Terr,42.349079,-71.151939
+973,Washington St @ Market St,42.349205,-71.154037
+974,Washington St @ Foster St,42.349159,-71.157227
+975,Washington St @ Brock St,42.348976,-71.160576
+977,Washington St @ Montfern Ave,42.349895,-71.164520
+9780,Washington St @ Oak Sq,42.350563,-71.166649
+979,Tremont St @ Washington St,42.350609,-71.168633
+981,Tremont St opp Tremont Pl,42.350800,-71.172165
+982,Tremont St opp Cufflin St,42.351669,-71.173973
+983,Tremont St @ Playstead Rd,42.352921,-71.176537
+985,Tremont St @ Waverly Ave,42.353973,-71.178780
+986,Tremont St @ Hibbard Rd,42.354832,-71.181198
+987,Park St @ Tremont St,42.355606,-71.182243
+988,Centre St @ Jefferson St,42.358040,-71.184639
+989,Galen St @ Maple St,42.360081,-71.185333
+900,Watertown Yard,42.364307,-71.185699
+938,Commonwealth Ave @ St Marys St,42.349789,-71.106392
+939,Commonwealth Ave @ Hinsdale St,42.349396,-71.103058
+941,Commonwealth Ave @ Blandford St,42.348969,-71.099640
+899,Kenmore Station Busway,42.348949,-71.095169

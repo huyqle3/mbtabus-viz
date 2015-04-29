@@ -1,0 +1,34 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+334,Ashmont Station,42.284652,-71.064489
+367,Talbot Ave @ Dorchester Ave,42.286095,-71.064354
+369,Talbot Ave @ Welles Ave,42.289135,-71.067039
+371,Talbot Ave @ Centre St,42.290169,-71.070633
+372,Talbot Ave @ Southern Ave,42.290581,-71.073105
+373,Talbot Ave @ Spencer St,42.291229,-71.075287
+374,Talbot Ave @ Norwell St,42.292015,-71.077980
+375,Talbot Ave @ Bernard St,42.292435,-71.079407
+376,Talbot Ave @ Kerwin St,42.293346,-71.082527
+378,Talbot Ave @ Nightingale St,42.294376,-71.086044
+1737,Blue Hill Ave @ Talbot Ave,42.295315,-71.087608
+381,Blue Hill Ave @ Wales St,42.298519,-71.086578
+382,Blue Hill Ave @ Charlotte St,42.300526,-71.085884
+383,Blue Hill Ave @ Ellington St - Franklin Park Zoo,42.302769,-71.085182
+9448,Seaver St @ Blue Hill Ave,42.305630,-71.085320
+1739,Seaver St @ Maple St,42.306759,-71.087234
+1740,Seaver St @ Elm Hill Ave,42.307598,-71.088814
+1741,Seaver St @ Humboldt Ave,42.310074,-71.092163
+1742,Seaver St @ Harold St,42.312096,-71.093323
+1743,Columbus Ave @ Walnut Ave,42.313538,-71.095100
+1188,1990 Columbus Ave,42.315395,-71.097816
+1215,Columbus Ave @ Bray St,42.317245,-71.098114
+1216,Columbus Ave @ Dimock St,42.319450,-71.098160
+1218,Columbus Ave @ Ritchie St,42.322311,-71.098267
+11531,Jackson Sq Station @ Orange Line,42.323132,-71.099592
+1219,Columbus Ave @ Centre St,42.325016,-71.098083
+1221,Columbus Ave @ Cedar St,42.328011,-71.096924
+1222,Columbus Ave @ Malcolm X Blvd,42.331192,-71.094467
+1224,Tremont St opp Prentiss St,42.332706,-71.092346
+17861,Ruggles Sta - Upper Level,42.336377,-71.088961
+428,Talbot Ave @ Welles Ave,42.288963,-71.066971
+430,Talbot Ave @ Dorchester Ave,42.286037,-71.064499
+334,Ashmont Station,42.284652,-71.064489

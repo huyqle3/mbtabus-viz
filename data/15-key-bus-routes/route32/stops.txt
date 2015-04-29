@@ -1,0 +1,39 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+42819,Hyde Park Ave @ Wolcott Square,42.237297,-71.131981
+16466,Hyde Park Ave @ Milton St,42.239086,-71.132172
+26467,Opp 1661 Hyde Park Ave,42.241699,-71.130638
+46467,Opp 1575 Hyde Park Ave,42.244465,-71.129547
+56567,1532 Hyde Park Ave opp Reservation Rd,42.246094,-71.128868
+75467,Hyde Park Ave @ Glenwood Ave,42.248444,-71.126930
+26466,1344 Hyde Park Ave @ Blake Estates,42.252026,-71.125221
+36466,Hyde Park Ave @ Oak Street,42.254921,-71.124161
+6466,Hyde Park Ave @ Clay Street,42.257977,-71.123528
+6467,Hyde Park Ave @ Harvard Ave,42.260578,-71.122696
+6468,Hyde Park Ave @ West St,42.261692,-71.121994
+6470,Hyde Park Ave @ Westminster St,42.264156,-71.121239
+6471,Hyde Park Ave @ Thatcher St,42.266018,-71.120926
+6472,Opp 945 Hyde Park Ave,42.267673,-71.120811
+6473,Hyde Park Ave @ Collins Street,42.270454,-71.120422
+6474,Hyde Park Ave @ American Legion Hwy,42.272827,-71.119980
+6476,Hyde Park Ave @ Ramsdell Ave,42.276993,-71.119385
+6478,Hyde Park Ave @ Cummins Hwy,42.279968,-71.118820
+6479,510 Hyde Park Ave,42.282406,-71.118774
+6480,Hyde Park Ave @ Mt Hope St,42.285065,-71.118759
+16479,Hyde Park Ave @ Neponset Ave,42.286304,-71.118599
+36479,Hyde Park Ave @ Southbourne Rd,42.289719,-71.118050
+56479,Hyde Park Ave @ Eldridge Rd,42.292343,-71.117622
+76479,Hyde Park Ave @ Walk Hill St,42.296074,-71.116081
+875,Forest Hills Station Lower Busway,42.300523,-71.113686
+6504,Hyde Park Ave @ Greenwood Ave,42.265987,-71.121170
+6505,Hyde Park Ave @ Westminster St,42.264118,-71.121460
+6507,Hyde Park Ave @ West St,42.261536,-71.122299
+6508,Hyde Park Ave opp Webster St,42.258968,-71.123474
+6509,Hyde Park Ave @ Grant Place,42.256718,-71.124008
+2819,Hyde Park Ave @ Pingree St,42.254742,-71.124397
+2818,Opp 1344 Hyde Park Ave - Blake Estates,42.252060,-71.125336
+22819,Hyde Park Ave @ Glenwood Ave,42.248646,-71.126945
+22818,Hyde Park Ave @ Reservation Rd,42.246479,-71.128708
+22821,1587 Hyde Park Ave,42.244495,-71.129662
+32818,1661 Hyde Park Ave,42.241730,-71.130753
+42818,Hyde Park Ave @ Milton St,42.239288,-71.132133
+42819,Hyde Park Ave @ Wolcott Square,42.237297,-71.131981

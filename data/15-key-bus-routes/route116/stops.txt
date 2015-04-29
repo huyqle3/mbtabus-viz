@@ -1,0 +1,37 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+15795,Wonderland West Busway,42.413420,-70.991648
+4735,N Shore Rd @ Agawam St,42.417076,-70.990898
+5700,Revere St @ Bellevue Ave,42.418682,-70.992409
+5701,Revere St @ Bosson St,42.418575,-70.995972
+5703,Revere St @ Bates St,42.418495,-70.998772
+5704,Revere St @ Breed St,42.417446,-71.000740
+35704,Revere St @ Stowers St,42.416553,-71.002014
+5709,Revere St @ Carleton St,42.416729,-71.006950
+5562,Broadway @ Cushman Ave,42.414810,-71.009399
+5711,570 Broadway @ Elmwood Ave,42.413517,-71.010216
+5713,Broadway opp Central Ave,42.410793,-71.011971
+5714,Broadway @ Yeamans St,42.408272,-71.013573
+5715,Broadway @ Page St,42.405045,-71.016350
+5718,Broadway @ Cabot St,42.402054,-71.019699
+5719,Broadway @ Stockton St,42.400898,-71.021034
+5720,Broadway @ Webster Ave,42.399754,-71.022331
+5721,Broadway opp Green St,42.398746,-71.023666
+5722,Broadway @ Eleanor St,42.397831,-71.025261
+5723,Broadway @ Parker St,42.396931,-71.026863
+5724,Broadway @ Cary Ave,42.396027,-71.028442
+5725,Broadway @ Crescent Ave,42.395378,-71.029579
+5726,Broadway opp Gerrish Ave,42.394577,-71.030991
+46170,Broadway @ City Hall Ave,42.393787,-71.032402
+5605,Washington Ave @ Broadway,42.392841,-71.034134
+5606,Broadway @ Fourth St,42.391796,-71.035912
+5653,Broadway opp Cross St,42.390549,-71.038147
+5728,Pearl St opp Essex St,42.389526,-71.037720
+5729,Pearl St @ Williams St,42.387978,-71.038734
+5730,Meridian St @ Condor St,42.382687,-71.039375
+5731,Meridian St @ West Eagle St,42.381432,-71.039375
+5732,Meridian St @ White St,42.380386,-71.039314
+5733,Meridian St @ Eutaw St,42.378716,-71.039284
+5734,Meridian St @ Lexington St,42.377026,-71.039246
+5736,Meridian St @ Liverpool St,42.374088,-71.039146
+5737,Meridian St @ Havre St,42.372028,-71.039108
+5740,Maverick Station,42.369119,-71.039530

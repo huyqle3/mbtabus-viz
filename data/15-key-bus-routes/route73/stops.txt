@@ -1,0 +1,31 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+12614,Waterhouse St @ Massachusetts Ave,42.377758,-71.120537
+2076,Harvard Lower Busway @ Red Line,42.373362,-71.118956
+2020,Mt Auburn St @ Story St,42.373516,-71.123268
+2021,Mt Auburn St @ Ash St,42.374355,-71.125633
+2023,Mt Auburn St @ Sparks St,42.374729,-71.130455
+2025,Mt Auburn St @ Longfellow Rd,42.374939,-71.133865
+2026,Mt Auburn St @ Traill St,42.375072,-71.136650
+2027,Mt Auburn St opp Coolidge Ave,42.374973,-71.139580
+2028,Mt Auburn St @ Brattle St,42.375397,-71.143944
+2029,Mt Auburn St @ Aberdeen Ave,42.375366,-71.145470
+2030,Mt Auburn St @ Homer Ave,42.374973,-71.148308
+2118,Belmont St @ Cushing St,42.374924,-71.151512
+2119,Belmont St @ Sullivan Rd,42.375168,-71.154037
+2120,Belmont St @ Oxford Ave,42.375622,-71.156548
+2121,Belmont St @ Marion Rd,42.376148,-71.158234
+2122,Belmont St @ Falmouth St,42.376728,-71.160599
+2123,Belmont St @ School St,42.376930,-71.163361
+2124,Belmont St @ Payson Rd,42.377258,-71.166351
+2125,Belmont St @ Oakley Rd,42.377743,-71.169304
+2126,Trapelo Rd @ Oak Ave,42.378811,-71.171295
+2127,Trapelo Rd @ Common St - Cushing Square,42.380749,-71.174950
+2128,Trapelo Rd opp Poplar St,42.381744,-71.178009
+2129,Trapelo Rd @ Slade St,42.382660,-71.180183
+2130,Trapelo Rd opp Walnut St,42.384659,-71.182411
+2131,Trapelo Rd @ Beech St,42.385654,-71.184074
+2132,Trapleo Rd @ Hawthorne St,42.386486,-71.186333
+2133,Trapelo Rd @ Waverley St,42.387089,-71.188118
+2134,Church St @ Lexington St,42.387196,-71.190613
+20761,Harvard Upper Busway @ Red Line,42.373362,-71.118956
+12614,Waterhouse St @ Massachusetts Ave,42.377758,-71.120537

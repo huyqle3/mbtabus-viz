@@ -1,0 +1,32 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+8310,Haymarket Station,42.363021,-71.058290
+2832,N Washington St @ Thacher St,42.365196,-71.058266
+2833,N Washington St @ Commercial St,42.367428,-71.058731
+5611,Beacon St @ Broadway,42.388714,-71.042267
+5612,Park St @ Williams St,42.388996,-71.040604
+5613,Park St @ Cross St,42.389702,-71.037750
+5614,Park St @ Hawthorne St,42.390263,-71.035553
+5615,Hawthorne St @ Broadway,42.392517,-71.034126
+5601,Washington Ave @ Cary Ave,42.398033,-71.030991
+5589,Washington Ave @ Prospect Ave,42.411201,-71.031403
+5590,Washington Ave @ Annese Rd,42.409714,-71.030197
+5591,Garfield Ave @ Exeter St,42.407368,-71.029541
+5592,78 Garfield Ave opp Clyde St,42.406258,-71.029564
+5593,Sagamore Ave @ Jones Ave,42.405308,-71.030579
+5594,Sagamore Ave @ Murray St,42.405014,-71.033089
+5595,Sagamore Ave @ Washington Ave,42.404724,-71.035561
+5596,Washington Ave @ Revere Beach Pkwy,42.403957,-71.035995
+5597,Washington Ave @ Reynolds Ave,42.403053,-71.036278
+5598,296 Washington Ave opp Jefferson Ave,42.402027,-71.035400
+5599,Washington Ave @ Carmel St,42.400402,-71.033470
+5600,Washington Ave @ Spruce St,42.399426,-71.032318
+5601,Washington Ave @ Cary Ave,42.398033,-71.030991
+5602,Washington Ave @ Bloomingdale St,42.397400,-71.031349
+5603,Washington Ave @ Heard St,42.395576,-71.032913
+5609,Washington Ave @ Chestnut St,42.394283,-71.033615
+5605,Washington Ave @ Broadway,42.392841,-71.034134
+5606,Broadway @ Fourth St,42.391796,-71.035912
+5607,Third St @ Chestnut St,42.391655,-71.038399
+5650,Arlington St @ Fifth St,42.394714,-71.036278
+2829,N Washington St @ Medford St,42.365749,-71.058502
+8310,Haymarket Station,42.363021,-71.058290

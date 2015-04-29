@@ -1,0 +1,49 @@
+stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+8750,Forest Hills Station,42.300523,-71.113686
+1936,South St @ Spalding St,42.303741,-71.114632
+1937,South St @ Child St,42.306545,-71.115143
+1938,South St @ Carolina Ave,42.307800,-71.115456
+1128,South St @ Sedgwick St,42.308590,-71.115486
+1129,Centre St @ Seaverns Ave,42.312199,-71.114143
+1130,Centre St @ Saint John St,42.314198,-71.114037
+1132,Centre St @ Robinwood Ave,42.316952,-71.113365
+11131,Centre St @ Roseway,42.318993,-71.111931
+6570,S Huntington Ave @ Perkins St,42.321697,-71.112022
+6571,S Huntington Ave @ Bynner St,42.323811,-71.112190
+6573,S Huntington Ave @ VA Hospital,42.326595,-71.111282
+6574,S Huntington Ave @ Heath St,42.328681,-71.110559
+65741,100 S Huntington Ave,42.329403,-71.110931
+6575,S Huntington Ave @ Huntington Ave,42.331871,-71.111969
+1315,Huntington Ave @ Parker Hill Ave,42.333092,-71.109680
+1317,Huntington Ave opp Fenwood Rd,42.334229,-71.104609
+21317,Huntington Ave @ Wigglesworth St,42.334831,-71.102699
+31317,Huntington Ave @ Longwood Ave,42.335831,-71.099869
+51317,Huntington Ave @ Ruggles St,42.337612,-71.095268
+81317,360 Huntington Ave,42.340401,-71.088806
+91317,Huntington Ave @ Gainsborough St,42.341244,-71.086510
+1399,Belvidere St @ Huntington Ave,42.345531,-71.081932
+11390,Dalton St @ Boylston St,42.347778,-71.085480
+175,Boylston St @ Dartmouth St,42.349974,-71.077447
+143,Boylston St @ Clarendon St,42.350594,-71.075287
+23391,Back Bay Station,42.347350,-71.075727
+1937,South St @ Child St,42.306545,-71.115143
+1938,South St @ Carolina Ave,42.307800,-71.115456
+1128,South St @ Sedgwick St,42.308590,-71.115486
+1129,Centre St @ Seaverns Ave,42.312199,-71.114143
+1130,Centre St @ Saint John St,42.314198,-71.114037
+1132,Centre St @ Robinwood Ave,42.316952,-71.113365
+11131,Centre St @ Roseway,42.318993,-71.111931
+6570,S Huntington Ave @ Perkins St,42.321697,-71.112022
+6571,S Huntington Ave @ Bynner St,42.323811,-71.112190
+6573,S Huntington Ave @ VA Hospital,42.326595,-71.111282
+6574,S Huntington Ave @ Heath St,42.328681,-71.110559
+65741,100 S Huntington Ave,42.329403,-71.110931
+6575,S Huntington Ave @ Huntington Ave,42.331871,-71.111969
+1315,Huntington Ave @ Parker Hill Ave,42.333092,-71.109680
+1317,Huntington Ave opp Fenwood Rd,42.334229,-71.104609
+21317,Huntington Ave @ Wigglesworth St,42.334831,-71.102699
+31317,Huntington Ave @ Longwood Ave,42.335831,-71.099869
+51317,Huntington Ave @ Ruggles St,42.337612,-71.095268
+81317,360 Huntington Ave,42.340401,-71.088806
+91317,Huntington Ave @ Gainsborough St,42.341244,-71.086510
+143,Boylston St @ Clarendon St,42.350594,-71.075287

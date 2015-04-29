@@ -13,6 +13,14 @@ body {
 	font-size: 18px;
 }
 
+.chart .axis path,
+.chart .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
 .input-color {
     position: relative;
 }
@@ -27,6 +35,14 @@ body {
     position: absolute;
     left: 5px;
     top: 5px;
+}
+
+#map-canvas{
+  height: 500px;
+}
+
+#list{
+  list-style-type: none;
 }
 
 /* Footer and Social Buttons */
