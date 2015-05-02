@@ -13,8 +13,8 @@ body {
 	font-size: 18px;
 }
 
-.chart .axis path,
-.chart .axis line {
+.chart1 .axis path,
+.chart1 .axis line {
     fill: none;
     stroke: grey;
     stroke-width: 1;
