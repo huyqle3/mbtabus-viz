@@ -155,8 +155,8 @@ function runTimeLine(busRoute, inOut, year, month, metric, chartNumber){
 	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 1200 - margin.left - margin.right,
+    height = 460 - margin.top - margin.bottom;
 
 	var parseDate = d3.time.format("%H:%M").parse;
 
@@ -269,7 +269,7 @@ function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber){
 
 
 function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success){
-	$('#' + success).html("<div class='input-color'><input type='text' value='Average Actual Wait Time' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Wait Time' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
+	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Wait Time' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Wait Time' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
 	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
@@ -358,7 +358,7 @@ function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success
 
 
 function headway(busRoute, inOut, year, month, metric, chartNumber, success){
-	$('#' + success).html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
+	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Headway' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
 	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},

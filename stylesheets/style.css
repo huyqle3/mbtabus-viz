@@ -21,6 +21,14 @@ body {
     shape-rendering: crispEdges;
 }
 
+.chart2 .axis path,
+.chart2 .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
 .input-color {
     position: relative;
 }
