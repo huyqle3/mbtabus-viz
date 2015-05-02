@@ -10,165 +10,34 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 }
 
-var route1 = [];
-var secondRoute1 = [];
-var connectedCoordinatesRoute1 = [];
-var secondConnectedCoordinatesRoute1 = [];
-var pathRoute1 = [];
-var secondPathRoute1 = [];
-
-var route15 = [];
-var secondRoute15 = [];
-var connectedCoordinatesRoute15 = [];
-var secondConnectedCoordinatesRoute15 = [];
-var pathRoute15 = [];
-var secondPathRoute15 = [];
-
-var route22 = [];
-var secondRoute22 = [];
-var connectedCoordinatesRoute22 = [];
-var secondConnectedCoordinatesRoute22 = [];
-var pathRoute22 = [];
-var secondPathRoute22 = [];
-
-var route23 = [];
-var secondRoute23 = [];
-var connectedCoordinatesRoute23 = [];
-var secondConnectedCoordinatesRoute23 = [];
-var pathRoute23 = [];
-var secondPathRoute23 = [];
-
-var route28 = [];
-var secondRoute28 = [];
-var connectedCoordinatesRoute28 = [];
-var secondConnectedCoordinatesRoute28 = [];
-var pathRoute28 = [];
-var secondPathRoute28 = [];
-
-var route57 = [];
-var secondRoute57 = [];
-var connectedCoordinatesRoute57 = [];
-var secondConnectedCoordinatesRoute57 = [];
-var pathRoute57 = [];
-var secondPathRoute57 = [];
-
-var route32 = [];
-var secondRoute32 = [];
-var connectedCoordinatesRoute32 = [];
-var secondConnectedCoordinatesRoute32 = [];
-var pathRoute32 = [];
-var secondPathRoute32 = [];
-
-var route39 = [];
-var secondRoute39 = [];
-var connectedCoordinatesRoute39 = [];
-var secondConnectedCoordinatesRoute39 = [];
-var pathRoute39 = [];
-var secondPathRoute39 = [];
-
-var route66 = [];
-var secondRoute66 = [];
-var connectedCoordinatesRoute66 = [];
-var secondConnectedCoordinatesRoute66 = [];
-var pathRoute66 = [];
-var secondPathRoute66 = [];
-
-var route71 = [];
-var secondRoute71 = [];
-var connectedCoordinatesRoute71 = [];
-var secondConnectedCoordinatesRoute71 = [];
-var pathRoute71 = [];
-var secondPathRoute71 = [];
-
-var route73 = [];
-var secondRoute73 = [];
-var connectedCoordinatesRoute73 = [];
-var secondConnectedCoordinatesRoute73 = [];
-var pathRoute73 = [];
-var secondPathRoute73 = [];
-
-var route77 = [];
-var secondRoute77 = [];
-var connectedCoordinatesRoute77 = [];
-var secondConnectedCoordinatesRoute77 = [];
-var pathRoute77 = [];
-var secondPathRoute77 = [];
-
-var route111 = [];
-var secondRoute111 = [];
-var connectedCoordinatesRoute111 = [];
-var secondConnectedCoordinatesRoute111 = [];
-var pathRoute111 = [];
-var secondPathRoute111 = [];
-
-var route116 = [];
-var secondRoute116 = [];
-var connectedCoordinatesRoute116 = [];
-var secondConnectedCoordinatesRoute116 = [];
-var pathRoute116 = [];
-var secondPathRoute116 = [];
-
-var route117 = []; 
-var secondRoute117 = [];
-var connectedCoordinatesRoute117 = [];
-var secondConnectedCoordinatesRoute117 = [];
-var pathRoute117 = [];
-var secondPathRoute117 = [];
+var markerPositions = new Array();
+var markerArray = new Array();
+var polyline = new Array();
 
 // called back function that can use parsed data
-function createMarker(data, array, connected, connectedLine){
+function createMarker(data){
 
-    for(var i = 0; i < 23; i++){
+    for(var i = 1; i < data.length-1; i++){
         var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
+        markerPositions.push(markerPosition);
 
         var marker = new google.maps.Marker({
-            icon: ('/mbta-busses/html/img/bus.png'),
+            icon: ('images/bus.png'),
             position: markerPosition,
             map: map,
             title: data[i][1]
         });
 
-        /* var contentString = '<div id="content" style="width:400px; height:300px;">'+
-    '<p id="embedly-link" class=\"embedly-card\">'+ data[i][1] + '</>';
-
-        // Add the event listeners to inforwindow
-        google.maps.event.addListener(infowindow, 'domready', function () {
-            var embedlyLink = document.getElementById('embedly-link');
-            embedly.card(embedlyLink);
-        });
-
-        google.maps.event.addListener(airPollutionControlMarker, 'click', function() {
-            infowindow.setContent(contentString);
-            infowindow.open(map, marker);
-        }); */
-
-        /* var contentString = '<div id="content">'+
-        data[i][1] +
-        '</div>'
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        }); */    
-    
-        // connectedCoordinates[i] = markerPosition;
-        connected.push(markerPosition);
-        array.push(marker);
-        // Debugging
-        /*
-        if(i == 10){
-            break;
-        }
-        */
-
-        /*
-        var eventListener = new google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setOptions({
-                content: contentString
-            });
-            infowindow.open(map, marker);
-        }); 
-        */
+        markerArray.push(marker);
     }
+
+    polyline = new google.maps.Polyline({
+        path: markerPositions,
+        geodesic: true,
+        strokeColor: '#1f98d9',
+        strokeOpacity: 1.0,
+        strokeWeight: 5
+    });
 
     // Debug test
     /*
@@ -178,131 +47,56 @@ function createMarker(data, array, connected, connectedLine){
         new google.maps.LatLng(42.350594, -71.075287),
         new google.maps.LatLng(42.356728, -71.057480)
     ];
-    */
-
-    /*
-    for(var i = 0; i < connectedCoordinates.length; i++){
-        console.log(connectedCoordinates[i]);
-    }
 
     for(var i = 0; i < flightPlanCoordinates.length; i++){
-        console.log(flightPlanCoordinates[i]);
-    }
-    */
-    // console.log(connectedLine);
-
-    connectedPath = new google.maps.Polyline({
-        path: connected,
-        geodesic: true,
-        strokeColor: '#1f98d9',
-        strokeOpacity: 1.0,
-        strokeWeight: 5
-    });
-    
-    pathRoute1 = connectedPath;
-    pathRoute15 = connectedPath;
-    pathRoute22 = connectedPath;
-    pathRoute23 = connectedPath;
-    pathRoute28 = connectedPath;
-    pathRoute57 = connectedPath;
-    pathRoute32 = connectedPath;
-    pathRoute39 = connectedPath;
-    pathRoute66 = connectedPath;
-    pathRoute71 = connectedPath;
-    pathRoute73 = connectedPath;
-    pathRoute77 = connectedPath;
-    pathRoute111 = connectedPath;
-    pathRoute116 = connectedPath;
-    pathRoute117 = connectedPath;
-
-    addLine(connectedPath);
-}
-
-function createMarker2(data, array, connected, connectedPath){
-    for(var i = 22; i < data.length; i++){
-        var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
-
-        var marker = new google.maps.Marker({
-            icon: ('/mbta-busses/html/img/bus.png'),
-            position: markerPosition,
+        markerArray[i] = new google.maps.Marker({
+            icon: ('images/bus.png'),
+            position: flightPlanCoordinates[i],
             map: map,
-            title: data[i][1]
+            title: "hello world"
         });
-
-        connected.push(markerPosition);
-        array.push(marker);
     }
 
-    connectedPath = new google.maps.Polyline({
-        path: connected,
+    polyline = new google.maps.Polyline({
+        path: flightPlanCoordinates,
         geodesic: true,
         strokeColor: '#1f98d9',
         strokeOpacity: 1.0,
         strokeWeight: 5
     });
-    
-    secondPathRoute1 = connectedPath;
-    secondPathRoute15 = connectedPath;
-    secondPathRoute22 = connectedPath;
-    secondPathRoute23 = connectedPath;
-    secondPathRoute28 = connectedPath;
-    secondPathRoute57 = connectedPath;
-    secondPathRoute32 = connectedPath;
-    secondPathRoute39 = connectedPath;
-    secondPathRoute66 = connectedPath;
-    secondPathRoute71 = connectedPath;
-    secondPathRoute73 = connectedPath;
-    secondPathRoute77 = connectedPath;
-    secondPathRoute111 = connectedPath;
-    secondPathRoute116 = connectedPath;
-    secondPathRoute117 = connectedPath;
+    */
 
-    addLine(connectedPath);
+    polyline.setMap(map);
 }
 
-function parseData(url, array, connected, connectedPath, callback){
+
+function parseData(url, callback){
     Papa.parse(url, {
         download: true,
         complete: function(results){
-            callback(results.data, array, connected, connectedPath);
-            console.log(results.data);
+            callback(results.data);
         }
     });
 }
 
-function addLine(connectedPath){
-    connectedPath.setMap(map);
-}
-
-function clearData(array) {
-    // console.log(array);
-    for (var i = 0; i < array.length; i++) {
-        array[i].setMap(null);
+function clearMarkers(markerArray) {
+    for (var i = 0; i < markerArray.length; i++) {
+        markerArray[i].setMap(null);
     }
-    array = [];
-    // array.length = 0;
-}
-
-function removeMarkersAndLines(route, secondRoute, pathRoute, secondPathRoute){
-    clearData(route);
-    clearData(secondRoute);
-    pathRoute.setMap(null);
-    secondPathRoute.setMap(null);
 }
 
 // parseData("data/route57_stops.csv", map);
 
-// list of checkbox listeners for each route
+
 $('#route1').change(function() {
     if($('#route1').prop("checked")) {
-        // run the function with the csv and a callback
-        // pathRoute1 = [];
-        // secondPathRoute1 = [];
-        parseData("data/15-key-bus-routes/route1/stops.txt", route1, connectedCoordinatesRoute1, pathRoute1, createMarker);
-        parseData("data/15-key-bus-routes/route1/stops.txt", secondRoute1, secondConnectedCoordinatesRoute1, secondPathRoute1, createMarker2);
+        parseData("data/15-key-bus-routes/route1/stops.txt", createMarker);
     }
     else{
-        removeMarkersAndLines(route1, secondRoute1, pathRoute1, secondPathRoute1);
+        clearMarkers(markerArray);
+        markerPositions = [];
+        markerArray = [];
+        polyline.setMap(null);
     }
 });
 
