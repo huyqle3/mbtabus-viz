@@ -70,6 +70,10 @@ var markerPositions117 = new Array();
 var markerArray117 = new Array();
 var polyline117 = new Array();
 
+var marker = new Array();
+var content = new Array();
+var infoWindows = new Array();
+
 // called back function that can use parsed data
 function createMarker(data, id, pos, array, poly){
 
@@ -77,14 +81,26 @@ function createMarker(data, id, pos, array, poly){
         var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
         pos.push(markerPosition);
 
-        var marker = new google.maps.Marker({
+        marker[i-1] = new google.maps.Marker({
             icon: ('images/bus.png'),
             position: markerPosition,
             map: map,
             title: data[i][1]
         });
 
-        array.push(marker);
+        marker[i-1].index = i-1;
+
+        content[i-1] = String(data[i][1]);
+
+        infoWindows[i-1] = new google.maps.InfoWindow({
+            content: content[i-1]
+        });
+
+        array.push(marker[i-1]);
+
+        google.maps.event.addListener(array[i-1], 'click', function() {
+            infoWindows[this.index].open(map, marker[this.index]);
+        });
     }
 
     poly = new google.maps.Polyline({
@@ -94,6 +110,7 @@ function createMarker(data, id, pos, array, poly){
         strokeOpacity: 1.0,
         strokeWeight: 5
     });
+
 
     // Debug test
     /*
