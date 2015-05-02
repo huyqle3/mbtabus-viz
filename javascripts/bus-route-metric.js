@@ -28,7 +28,7 @@ $(function(){
 				success: function(){
 					// Success message
 					clearAll();
-					$('#success').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+					$('#info').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 					console.log("../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
@@ -41,10 +41,8 @@ $(function(){
 					}else if(metric == "headway"){
 						headway(busRoute, inOut, year, month, metric);
 					}else{
-						//console.log("wait-time");
 						waitTimeLine(busRoute, inOut, year, month, metric);
 					}
-					// reposition();
 					// clear all fields
 					$('#routeForm').trigger("reset");
 				},
@@ -233,9 +231,11 @@ function actualVsScheduled(busRoute, inOut, year, month, metric){
 
 
 function waitTimeLine(busRoute, inOut, year, month, metric){
+	$('#success').html("<div class='input-color'><input type='text' value='Average Actual Wait Time' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Wait Time' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
+
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 1200 - margin.left - margin.right,
+    height = 460 - margin.top - margin.bottom;
 
 	var parseDate = d3.time.format("%H:%M").parse;
 
@@ -259,9 +259,13 @@ function waitTimeLine(busRoute, inOut, year, month, metric){
 
 	var line = d3.svg.line()
 	    .x(function(d) { return x(d.date); })
+	    .y(function(d) { return y(d.actual); });
+
+	var line2 = d3.svg.line()
+	    .x(function(d) { return x(d.date); })
 	    .y(function(d) { return y(d.close); });
 
-	var svg = d3.select(".line-chart").append("svg")
+	var svg = d3.select(".chart")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -279,11 +283,13 @@ function waitTimeLine(busRoute, inOut, year, month, metric){
 
 	svg.append("g")
 	    .attr("class", "x axis")
+	    .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	    .attr("transform", "translate(0," + height + ")")
 	    .call(xAxis);
 
 	svg.append("g")
 	    .attr("class", "y axis")
+	    .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	    .call(yAxis)
 	    .append("text")
 	    .attr("transform", "rotate(-90)")
@@ -295,13 +301,25 @@ function waitTimeLine(busRoute, inOut, year, month, metric){
 	svg.append("path")
 	    .datum(data)
 	    .attr("class", "line")
-	    .attr("d", line);
+	    .attr("d", line)
+	    .attr("stroke-width", 2)
+		.attr("stroke", 'black')
+		.style("fill", "none");
+
+	svg.append("path")
+	    .datum(data)
+	    .attr("class", "line")
+	    .attr("d", line2)
+	    .style("stroke-dasharray", ("3, 3"))
+		.attr("stroke-width", 3)
+		.attr("stroke", 'red')
+		.style("fill", "none");
 	});
 }
 
 
 function headway(busRoute, inOut, year, month, metric){
-	$('#success').html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:200px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:200px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
+	$('#success').html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
@@ -329,7 +347,6 @@ function headway(busRoute, inOut, year, month, metric){
 		
 	//Define the second line
 	var valueline2 = d3.svg.line()
-
 		.x(function(d) { 
 		if (d.AvgStartTime > 0 && d.AvgStartTime < 1439) { //Bound for end of this day (11:59pm = 1439 mins)
 		return x(d.mytime);} })
