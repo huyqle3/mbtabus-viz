@@ -76,8 +76,9 @@ var infoWindows = new Array();
 
 // called back function that can use parsed data
 function createMarker(data, id, pos, array, poly){
-
+    
     for(var i = 1; i < data.length-1; i++){
+        console.log(marker);
         var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
         pos.push(markerPosition);
 
