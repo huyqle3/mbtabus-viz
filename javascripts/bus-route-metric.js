@@ -32,44 +32,44 @@ $(function(){
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
-							runTimeBar(busRoute, inOut, "2012", month, bar, "chart1");
-							runTimeBar(busRoute, inOut, "2013", month, bar, "chart2");
+							runTimeBar(busRoute, inOut, "2012", month, bar, "chart1", "success1");
+							runTimeBar(busRoute, inOut, "2013", month, bar, "chart2", "success2");
 						}else{
-							runTimeBar(busRoute, inOut, "2013", month, bar, "chart1");
-							runTimeBar(busRoute, inOut, "2014", month, bar, "chart2");
+							runTimeBar(busRoute, inOut, "2013", month, bar, "chart1", "success1");
+							runTimeBar(busRoute, inOut, "2014", month, bar, "chart2", "success2");
 						}
 					}else if(metric == "run-time-line"){
 						var line = metric.substring(0, 8);
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
-							runTimeLine(busRoute, inOut, "2012", month, line, "chart1", "info1");
-							runTimeLine(busRoute, inOut, "2013", month, line, "chart2", "info2");
+							runTimeLine(busRoute, inOut, "2012", month, line, "chart1");
+							runTimeLine(busRoute, inOut, "2013", month, line, "chart2");
 						}else{
-							runTimeLine(busRoute, inOut, "2013", month, line, "chart1", "info1");
-							runTimeLine(busRoute, inOut, "2014", month, line, "chart2", "info2");
+							runTimeLine(busRoute, inOut, "2013", month, line, "chart1");
+							runTimeLine(busRoute, inOut, "2014", month, line, "chart2");
 						}
 					}else if(metric == "actual-vs-scheduled"){
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
-							actualVsScheduled(busRoute, inOut, "2012", month, metric, "chart1");
-							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart2");
+							actualVsScheduled(busRoute, inOut, "2012", month, metric, "chart1", "success1");
+							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart2", "success2");
 						}else{
-							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart1");
-							actualVsScheduled(busRoute, inOut, "2014", month, metric, "chart2");
+							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart1", "success1");
+							actualVsScheduled(busRoute, inOut, "2014", month, metric, "chart2", "success2");
 						}
 					}else if(metric == "headway"){
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
-							headway(busRoute, inOut, "2012", month, metric, "chart1", "success1");
-							headway(busRoute, inOut, "2013", month, metric, "chart2", "success2");
+							headway(busRoute, inOut, "2012", month, metric, "chart1", "success3");
+							headway(busRoute, inOut, "2013", month, metric, "chart2", "success4");
 						}else{
-							headway(busRoute, inOut, "2013", month, metric, "chart1", "success1");
-							headway(busRoute, inOut, "2014", month, metric, "chart2", "success2");
+							headway(busRoute, inOut, "2013", month, metric, "chart1", "success3");
+							headway(busRoute, inOut, "2014", month, metric, "chart2", "success4");
 						}
 					}else{
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
-							waitTimeLine(busRoute, inOut, "2012", month, metric, "chart1", "success1");
-							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart2", "success2");
+							waitTimeLine(busRoute, inOut, "2012", month, metric, "chart1", "success3");
+							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart2", "success4");
 						}else{
-							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart1", "success1");
-							waitTimeLine(busRoute, inOut, "2014", month, metric, "chart2", "success2");
+							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart1", "success3");
+							waitTimeLine(busRoute, inOut, "2014", month, metric, "chart2", "success4");
 						}
 					}
 					// clear all fields
@@ -102,10 +102,12 @@ function clearAll(){
 	$(".chart1").empty();
 	$("#success2").empty();
 	$(".chart2").empty();
+	$("#success3").empty();
+	$("#success4").empty();
 }
 
-function runTimeBar(busRoute, inOut, year, month, metric, chartNumber){
-	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+function runTimeBar(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var width = 440,
     barHeight = 12;
@@ -152,7 +154,7 @@ function runTimeBar(busRoute, inOut, year, month, metric, chartNumber){
 }
 
 function runTimeLine(busRoute, inOut, year, month, metric, chartNumber){
-	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+	$('.' + chartNumber).html("<br><p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
@@ -221,8 +223,8 @@ function runTimeLine(busRoute, inOut, year, month, metric, chartNumber){
 	});
 }
 
-function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber){
-	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 	// var width = 2200, barHeight = 12;
 	var width = 500, barHeight = 12;
 
@@ -270,7 +272,7 @@ function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber){
 
 function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success){
 	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Wait Time' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Wait Time' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
-	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+	$('.' + chartNumber).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
@@ -359,7 +361,7 @@ function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success
 
 function headway(busRoute, inOut, year, month, metric, chartNumber, success){
 	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Headway' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
-	$('.' + chartNumber).html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+	$('.' + chartNumber).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
