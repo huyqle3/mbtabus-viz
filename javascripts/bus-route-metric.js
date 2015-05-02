@@ -28,7 +28,7 @@ $(function(){
 				success: function(){
 					// Success message
 					clearAll();
-					$('#success').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
+					$('#info').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
 					console.log("../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
@@ -41,10 +41,8 @@ $(function(){
 					}else if(metric == "headway"){
 						headway(busRoute, inOut, year, month, metric);
 					}else{
-						//console.log("wait-time");
 						waitTimeLine(busRoute, inOut, year, month, metric);
 					}
-					// reposition();
 					// clear all fields
 					$('#routeForm').trigger("reset");
 				},
