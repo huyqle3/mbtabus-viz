@@ -70,26 +70,39 @@ var markerPositions117 = new Array();
 var markerArray117 = new Array();
 var polyline117 = new Array();
 
-var marker = new Array();
+var actualMarker = new Array();
 var content = new Array();
 var infoWindows = new Array();
+
+var actualMarker15 = new Array();
+var content15 = new Array();
+var infoWindows15 = new Array();
 
 // called back function that can use parsed data
 function createMarker(data, id, pos, array, poly){
     
     for(var i = 1; i < data.length-1; i++){
-        console.log(marker);
+        // console.log(actualMarker);
         var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
         pos.push(markerPosition);
 
-        marker[i-1] = new google.maps.Marker({
+        actualMarker[i-1] = new google.maps.Marker({
             icon: ('images/bus.png'),
             position: markerPosition,
             map: map,
             title: data[i][1]
         });
 
-        marker[i-1].index = i-1;
+        /*
+        var marker = new google.maps.Marker({
+            icon: ('images/bus.png'),
+            position: markerPosition,
+            map: map,
+            title: data[i][1]
+        });
+        */
+
+        actualMarker[i-1].index = i-1;
 
         content[i-1] = String(data[i][1]);
 
@@ -97,10 +110,11 @@ function createMarker(data, id, pos, array, poly){
             content: content[i-1]
         });
 
-        array.push(marker[i-1]);
-
+        array.push(actualMarker[i-1]);
+        // array.push(marker);
+        
         google.maps.event.addListener(array[i-1], 'click', function() {
-            infoWindows[this.index].open(map, marker[this.index]);
+            infoWindows[this.index].open(map, actualMarker[this.index]);
         });
     }
 
@@ -193,25 +207,31 @@ function clearMarkers(markerArray) {
 
 $('#route1').change(function() {
     if($('#route1').prop("checked")) {
-        parseData("data/15-key-bus-routes/route1/stops.txt", "route1", markerPositions1, markerArray1, polyline1, createMarker);
+        parseData("data/15-key-bus-routes/route1/stops.txt", "route1", markerPositions1, markerArray1, polyline1, createMarker);//actualMarker1, content1, infoWindows1, createMarker);
     }
     else{
         clearMarkers(markerArray1);
         markerPositions1 = [];
         markerArray1 = [];
         polyline1.setMap(null);
+        //actualMarker1 = [];
+        //content1 = [];
+        //infoWindows1 = [];
     }
 });
 
 $('#route15').change(function() {
     if($('#route15').prop("checked")) {
-        parseData("data/15-key-bus-routes/route15/stops.txt", "route15", markerPositions15, markerArray15, polyline15, createMarker);
+        parseData("data/15-key-bus-routes/route15/stops.txt", "route15", markerPositions15, markerArray15, polyline15, createMarker);//actualMarker15, content15, infoWindows15, createMarker);
     }
     else{
         clearMarkers(markerArray15);
         markerPositions15 = [];
         markerArray15 = [];
         polyline15.setMap(null);
+        //actualMarker15 = [];
+        //content15 = [];
+        //infoWindows15 = [];
     }
 });
 
