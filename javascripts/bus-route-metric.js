@@ -335,7 +335,7 @@ function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success
 	    .attr("y", 10)
 	    .attr("dy", ".71em")
 	    .style("text-anchor", "end")
-	    .text("Avg Wait Time (mins)");
+	    .text("Avg Wait Time");
 
 	svg.append("path")
 	    .datum(data)
