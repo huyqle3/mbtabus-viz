@@ -74,9 +74,11 @@ var actualMarker = new Array();
 var content = new Array();
 var infoWindows = new Array();
 
+/*
 var actualMarker15 = new Array();
 var content15 = new Array();
 var infoWindows15 = new Array();
+*/
 
 // called back function that can use parsed data
 function createMarker(data, id, pos, array, poly){
