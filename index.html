@@ -40,7 +40,8 @@
 
 	<div class="container" style="margin:50px; margin-bottom: 90px">
 		<p id="about">
-			Use MBTA-provided data to generate a comparison of on-time bus performance before and after the implementation of significant MBTA service changes that went into effect over the course of spring and summer 2013 (specific dates, by route, are available).
+			Boston's Massachusetts Bay Transit Authority (MBTA) operates a busy bus system. The MBTA provided data for us to generate a comparison of on-time bus performance before and after the implementation of significant MBTA service changes that went into effect over the course of spring and summer 2013 (specific dates, by route, are available). <br></br>
+			We attempt to present a few visualization tools to help MBTA personnel and people in Boston help better understand the buses and how the change in routes has affected the performance of those buses.
 		</p>
 	</div>
 
@@ -49,7 +50,7 @@
 			<div class="col-md-7">
 				<h2>The Buses</h2>
 				<p id="about">
-					The big question is whether the MBTA key bus route changes during 2013 benefitted or hurt the on-time bus performance. The following tool provides the ability to compare metrics of the MBTA key bus routes with the corresponding previous or next year. Extra options allow for further customization.
+					The MBTA implemented 15 key bus route changes during the spring and summer of 2013. The big question is whether those changes benefitted or hurt the on-time bus performance. To better understand how the Key Bus Route Program affected the buses, we produced visualizations on four key metrics: run time, actual vs scheduled times, headway, and wait times.
 				</p>
 			</div>
 			<div class="col-md-5">
@@ -64,9 +65,41 @@
 		</div>
 	</div>
 
+	<div class="container" style="margin:50px">
+		<div class = "row">
+			<div class = "col-md-9">
+				<h2>Late percentage</h2>
+				<p id="about">
+					The following graph provides a comparison of the percentages of buses that were late for each key bus routes. What percentages of buses were late for that key bus route? The graph compares before (pre) and after (post) the Key Bus Route Program.
+				</p>
+			</div>
+		</div>
+		<br>
+		<div class ="percentage">
+		</div>
+	</div>
+
 	<section id="bus-route">
 		<div class ="container">
-			<h2>Metric comparison</h2>
+			<div class = "row">
+				<h2>Metric comparison</h2>
+				<div class = "col-md-6">
+					<p id="about">
+						The following tool provides a form for analyzing data on the key bus metrics of choice. Submit the form and graphs will populate, providing a comparison between corresponding months in separate years for that metric.
+					</p>
+				</div>
+				<div class = "col-md-6">
+					<p id="definitions">
+						<span class ="definition-title">Run time:</span> time it takes for a bus to finish a one-way portion of a trip.
+						<br>
+						<span class ="definition-title">Actual vs Scheduled:</span> actual time that the bus takes to reach its destination compared to the scheduled time planned for the bus to reach that destination.
+						<br>
+						<span class ="definition-title">Headway:</span> time interval between different buses on a route.
+						<br>
+						<span class ="definition-title">Wait time:</span> time waited for a bus to reach its stop.
+					</p>
+				</div>
+			</div>
 			</br>
 			<div class="row">
 				<div class="col-md-6">
@@ -107,6 +140,7 @@
 									</label>
 								</div>
 							</div>
+							<!--
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Year</label>
 								<select id="year" class="form-control" required>
@@ -115,6 +149,7 @@
 									<option value="2014">2014</option>
 								</select>
 							</div>
+							-->
 							<div class="form-group">
 								<label class="col-sm-4 control-label">Month</label>
 								<select id="month" class="form-control" required>
@@ -156,87 +191,107 @@
 	</section>
 
 	<div id="content" class="container" style="margin: 50px">
-		<div id="success"></div>
-		<svg class="chart"></svg>
+		<div class = "row">
+			<div id = "success1" class = "col-md-6">
+			</div>
+			<div id = "success2" class = "col-md-6">
+			</div>
+		</div>
+		<div class = "row" id = "versus">
+			<div id="legend"></div>
+			<div id="success3"></div>
+			<div class="chart1"></div>
+			<div id="success4"></div>
+			<div class="chart2"></div>
+		</div>
 	</div>
 
 	<div class = "container">
-    <div class = "row">
-      <div class = "col-md-8">
-        <div id="map-canvas"></div>   
-      </div>
-      <div class = "col-md-2">
-        <h4>MBTA 15 Key Bus Routes</h4>
-        </br>
-        <ul id="list">
-          <li>
-          <input type="checkbox" id="route1">
-          <label class="boxes" for="route1">Bus Route 1</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route15">
-          <label class="boxes" for="route15">Bus Route 15</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route22">
-          <label class="boxes" for="route22">Bus Route 22</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route23">
-          <label class="boxes" for="route23">Bus Route 23</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route28">
-          <label class="boxes" for="route28">Bus Route 28</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route32">
-          <label class="boxes" for="route32">Bus Route 32</label>
-          </li>
-        </ul>
-      </div>
-      <div class = "col-md-2">
-        <ul id="list">
-          <li>
-          <input type="checkbox" id="route39">
-          <label class="boxes" for="route39">Bus Route 39</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route57">
-          <label class="boxes" for="route57">Bus Route 57</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route66">
-          <label class="boxes" for="route66">Bus Route 66</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route71">
-          <label class="boxes" for="route71">Bus Route 71</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route73">
-          <label class="boxes" for="route73">Bus Route 73</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route77">
-          <label class="boxes" for="route77">Bus Route 77</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route111">
-          <label class="boxes" for="route111">Bus Route 111</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route116">
-          <label class="boxes" for="route116">Bus Route 116</label>
-          </li>
-          <li>
-          <input type="checkbox" id="route117">
-          <label class="boxes" for="route117">Bus Route 117</label>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+		<div class = "row">
+			<div class = "col-md-8">
+				<h2>Map</h2>
+				<p id="about">
+					The following map provides a check-box tool to see where exactly are the 15 key bus routes. Check a box, and markers will populate that bus route.
+				</p>
+			</div>
+		</div>
+		<br>
+    	<div class = "row">
+      		<div class = "col-md-8">
+        		<div id="map-canvas"></div>   
+      		</div>
+      		<div class = "col-md-2">
+        		<h4>MBTA 15 Key Bus Routes</h4>
+        		</br>
+        		<ul id="list">
+          		<li>
+          			<input type="checkbox" id="route1">
+          			<label class="boxes" for="route1">Bus Route 1</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route15">
+          			<label class="boxes" for="route15">Bus Route 15</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route22">
+          			<label class="boxes" for="route22">Bus Route 22</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route23">
+          			<label class="boxes" for="route23">Bus Route 23</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route28">
+          			<label class="boxes" for="route28">Bus Route 28</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route32">
+          			<label class="boxes" for="route32">Bus Route 32</label>
+          		</li>
+        		</ul>
+      		</div>
+      		<div class = "col-md-2">
+        		<ul id="list">
+          		<li>
+          			<input type="checkbox" id="route39">
+          			<label class="boxes" for="route39">Bus Route 39</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route57">
+          			<label class="boxes" for="route57">Bus Route 57</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route66">
+          			<label class="boxes" for="route66">Bus Route 66</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route71">
+          			<label class="boxes" for="route71">Bus Route 71</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route73">
+          			<label class="boxes" for="route73">Bus Route 73</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route77">
+          			<label class="boxes" for="route77">Bus Route 77</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route111">
+          			<label class="boxes" for="route111">Bus Route 111</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route116">
+          			<label class="boxes" for="route116">Bus Route 116</label>
+          		</li>
+          		<li>
+          			<input type="checkbox" id="route117">
+          			<label class="boxes" for="route117">Bus Route 117</label>
+          		</li>
+        		</ul>
+      		</div>
+    	</div>
+  	</div>
 
 	<footer>
         <div class="container">
@@ -270,5 +325,6 @@
     <script src = "javascripts/papaparse.min.js"></script>
   	<script src = "javascripts/bus-map.js"></script>
 
+  	<script src = "javascripts/percentage-late.js"></script>
 </body>
 </html>
