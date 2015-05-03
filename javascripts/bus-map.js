@@ -10,165 +10,124 @@ function initialize() {
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 }
 
-var route1 = [];
-var secondRoute1 = [];
-var connectedCoordinatesRoute1 = [];
-var secondConnectedCoordinatesRoute1 = [];
-var pathRoute1 = [];
-var secondPathRoute1 = [];
+var markerPositions1 = new Array();
+var markerArray1 = new Array();
+var polyline1 = new Array();
 
-var route15 = [];
-var secondRoute15 = [];
-var connectedCoordinatesRoute15 = [];
-var secondConnectedCoordinatesRoute15 = [];
-var pathRoute15 = [];
-var secondPathRoute15 = [];
+var markerPositions15 = new Array();
+var markerArray15 = new Array();
+var polyline15 = new Array();
 
-var route22 = [];
-var secondRoute22 = [];
-var connectedCoordinatesRoute22 = [];
-var secondConnectedCoordinatesRoute22 = [];
-var pathRoute22 = [];
-var secondPathRoute22 = [];
+var markerPositions22 = new Array();
+var markerArray22 = new Array();
+var polyline22 = new Array();
 
-var route23 = [];
-var secondRoute23 = [];
-var connectedCoordinatesRoute23 = [];
-var secondConnectedCoordinatesRoute23 = [];
-var pathRoute23 = [];
-var secondPathRoute23 = [];
+var markerPositions23 = new Array();
+var markerArray23 = new Array();
+var polyline23 = new Array();
 
-var route28 = [];
-var secondRoute28 = [];
-var connectedCoordinatesRoute28 = [];
-var secondConnectedCoordinatesRoute28 = [];
-var pathRoute28 = [];
-var secondPathRoute28 = [];
+var markerPositions28 = new Array();
+var markerArray28 = new Array();
+var polyline28 = new Array();
 
-var route57 = [];
-var secondRoute57 = [];
-var connectedCoordinatesRoute57 = [];
-var secondConnectedCoordinatesRoute57 = [];
-var pathRoute57 = [];
-var secondPathRoute57 = [];
+var markerPositions32 = new Array();
+var markerArray32 = new Array();
+var polyline32 = new Array();
 
-var route32 = [];
-var secondRoute32 = [];
-var connectedCoordinatesRoute32 = [];
-var secondConnectedCoordinatesRoute32 = [];
-var pathRoute32 = [];
-var secondPathRoute32 = [];
+var markerPositions39 = new Array();
+var markerArray39 = new Array();
+var polyline39 = new Array();
 
-var route39 = [];
-var secondRoute39 = [];
-var connectedCoordinatesRoute39 = [];
-var secondConnectedCoordinatesRoute39 = [];
-var pathRoute39 = [];
-var secondPathRoute39 = [];
+var markerPositions57 = new Array();
+var markerArray57 = new Array();
+var polyline57 = new Array();
 
-var route66 = [];
-var secondRoute66 = [];
-var connectedCoordinatesRoute66 = [];
-var secondConnectedCoordinatesRoute66 = [];
-var pathRoute66 = [];
-var secondPathRoute66 = [];
+var markerPositions66 = new Array();
+var markerArray66 = new Array();
+var polyline66 = new Array();
 
-var route71 = [];
-var secondRoute71 = [];
-var connectedCoordinatesRoute71 = [];
-var secondConnectedCoordinatesRoute71 = [];
-var pathRoute71 = [];
-var secondPathRoute71 = [];
+var markerPositions71 = new Array();
+var markerArray71 = new Array();
+var polyline71 = new Array();
 
-var route73 = [];
-var secondRoute73 = [];
-var connectedCoordinatesRoute73 = [];
-var secondConnectedCoordinatesRoute73 = [];
-var pathRoute73 = [];
-var secondPathRoute73 = [];
+var markerPositions73 = new Array();
+var markerArray73 = new Array();
+var polyline73 = new Array();
 
-var route77 = [];
-var secondRoute77 = [];
-var connectedCoordinatesRoute77 = [];
-var secondConnectedCoordinatesRoute77 = [];
-var pathRoute77 = [];
-var secondPathRoute77 = [];
+var markerPositions77 = new Array();
+var markerArray77 = new Array();
+var polyline77 = new Array();
 
-var route111 = [];
-var secondRoute111 = [];
-var connectedCoordinatesRoute111 = [];
-var secondConnectedCoordinatesRoute111 = [];
-var pathRoute111 = [];
-var secondPathRoute111 = [];
+var markerPositions111 = new Array();
+var markerArray111 = new Array();
+var polyline111 = new Array();
 
-var route116 = [];
-var secondRoute116 = [];
-var connectedCoordinatesRoute116 = [];
-var secondConnectedCoordinatesRoute116 = [];
-var pathRoute116 = [];
-var secondPathRoute116 = [];
+var markerPositions116 = new Array();
+var markerArray116 = new Array();
+var polyline116 = new Array();
 
-var route117 = []; 
-var secondRoute117 = [];
-var connectedCoordinatesRoute117 = [];
-var secondConnectedCoordinatesRoute117 = [];
-var pathRoute117 = [];
-var secondPathRoute117 = [];
+var markerPositions117 = new Array();
+var markerArray117 = new Array();
+var polyline117 = new Array();
+
+var actualMarker = new Array();
+var content = new Array();
+var infoWindows = new Array();
+
+/*
+var actualMarker15 = new Array();
+var content15 = new Array();
+var infoWindows15 = new Array();
+*/
 
 // called back function that can use parsed data
-function createMarker(data, array, connected, connectedLine){
-
-    for(var i = 0; i < 23; i++){
+function createMarker(data, id, pos, array, poly){
+    
+    for(var i = 1; i < data.length-1; i++){
+        // console.log(actualMarker);
         var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
+        pos.push(markerPosition);
 
-        var marker = new google.maps.Marker({
-            icon: ('/mbta-busses/html/img/bus.png'),
+        actualMarker[i-1] = new google.maps.Marker({
+            icon: ('images/bus.png'),
             position: markerPosition,
             map: map,
             title: data[i][1]
         });
 
-        /* var contentString = '<div id="content" style="width:400px; height:300px;">'+
-    '<p id="embedly-link" class=\"embedly-card\">'+ data[i][1] + '</>';
+        /*
+        var marker = new google.maps.Marker({
+            icon: ('images/bus.png'),
+            position: markerPosition,
+            map: map,
+            title: data[i][1]
+        });
+        */
 
-        // Add the event listeners to inforwindow
-        google.maps.event.addListener(infowindow, 'domready', function () {
-            var embedlyLink = document.getElementById('embedly-link');
-            embedly.card(embedlyLink);
+        actualMarker[i-1].index = i-1;
+
+        content[i-1] = String(data[i][1]);
+
+        infoWindows[i-1] = new google.maps.InfoWindow({
+            content: content[i-1]
         });
 
-        google.maps.event.addListener(airPollutionControlMarker, 'click', function() {
-            infowindow.setContent(contentString);
-            infowindow.open(map, marker);
-        }); */
-
-        /* var contentString = '<div id="content">'+
-        data[i][1] +
-        '</div>'
-
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        }); */    
-    
-        // connectedCoordinates[i] = markerPosition;
-        connected.push(markerPosition);
-        array.push(marker);
-        // Debugging
-        /*
-        if(i == 10){
-            break;
-        }
-        */
-
-        /*
-        var eventListener = new google.maps.event.addListener(marker, 'click', function() {
-            infowindow.setOptions({
-                content: contentString
-            });
-            infowindow.open(map, marker);
-        }); 
-        */
+        array.push(actualMarker[i-1]);
+        // array.push(marker);
+        
+        google.maps.event.addListener(array[i-1], 'click', function() {
+            infoWindows[this.index].open(map, actualMarker[this.index]);
+        });
     }
+
+    poly = new google.maps.Polyline({
+        path: pos,
+        geodesic: true,
+        strokeColor: '#1f98d9',
+        strokeOpacity: 1.0,
+        strokeWeight: 5
+    });
+
 
     // Debug test
     /*
@@ -178,287 +137,260 @@ function createMarker(data, array, connected, connectedLine){
         new google.maps.LatLng(42.350594, -71.075287),
         new google.maps.LatLng(42.356728, -71.057480)
     ];
-    */
-
-    /*
-    for(var i = 0; i < connectedCoordinates.length; i++){
-        console.log(connectedCoordinates[i]);
-    }
 
     for(var i = 0; i < flightPlanCoordinates.length; i++){
-        console.log(flightPlanCoordinates[i]);
-    }
-    */
-    // console.log(connectedLine);
-
-    connectedPath = new google.maps.Polyline({
-        path: connected,
-        geodesic: true,
-        strokeColor: '#1f98d9',
-        strokeOpacity: 1.0,
-        strokeWeight: 5
-    });
-    
-    pathRoute1 = connectedPath;
-    pathRoute15 = connectedPath;
-    pathRoute22 = connectedPath;
-    pathRoute23 = connectedPath;
-    pathRoute28 = connectedPath;
-    pathRoute57 = connectedPath;
-    pathRoute32 = connectedPath;
-    pathRoute39 = connectedPath;
-    pathRoute66 = connectedPath;
-    pathRoute71 = connectedPath;
-    pathRoute73 = connectedPath;
-    pathRoute77 = connectedPath;
-    pathRoute111 = connectedPath;
-    pathRoute116 = connectedPath;
-    pathRoute117 = connectedPath;
-
-    addLine(connectedPath);
-}
-
-function createMarker2(data, array, connected, connectedPath){
-    for(var i = 22; i < data.length; i++){
-        var markerPosition = new google.maps.LatLng(data[i][2], data[i][3]);
-
-        var marker = new google.maps.Marker({
-            icon: ('/mbta-busses/html/img/bus.png'),
-            position: markerPosition,
+        markerArray[i] = new google.maps.Marker({
+            icon: ('images/bus.png'),
+            position: flightPlanCoordinates[i],
             map: map,
-            title: data[i][1]
+            title: "hello world"
         });
-
-        connected.push(markerPosition);
-        array.push(marker);
     }
 
-    connectedPath = new google.maps.Polyline({
-        path: connected,
+    polyline = new google.maps.Polyline({
+        path: flightPlanCoordinates,
         geodesic: true,
         strokeColor: '#1f98d9',
         strokeOpacity: 1.0,
         strokeWeight: 5
     });
-    
-    secondPathRoute1 = connectedPath;
-    secondPathRoute15 = connectedPath;
-    secondPathRoute22 = connectedPath;
-    secondPathRoute23 = connectedPath;
-    secondPathRoute28 = connectedPath;
-    secondPathRoute57 = connectedPath;
-    secondPathRoute32 = connectedPath;
-    secondPathRoute39 = connectedPath;
-    secondPathRoute66 = connectedPath;
-    secondPathRoute71 = connectedPath;
-    secondPathRoute73 = connectedPath;
-    secondPathRoute77 = connectedPath;
-    secondPathRoute111 = connectedPath;
-    secondPathRoute116 = connectedPath;
-    secondPathRoute117 = connectedPath;
+    */
+    switch(id){
+        case "route1":
+            polyline1 = poly;
+        case "route15":
+            polyline15 = poly;
+        case "route22":
+            polyline22 = poly;
+        case "route23":
+            polyline23 = poly;
+        case "route28":
+            polyline28 = poly;
+        case "route32":
+            polyline32 = poly;
+        case "route39":
+            polyline39 = poly;
+        case "route57":
+            polyline57 = poly;
+        case "route66":
+            polyline66 = poly;
+        case "route71":
+            polyline71 = poly;
+        case "route73":
+            polyline73 = poly;
+        case "route77":
+            polyline77 = poly;
+        case "route111":
+            polyline111 = poly;
+        case "route116":
+            polyline116 = poly;
+        case "route117":
+            polyline117 = poly;
+    }
 
-    addLine(connectedPath);
+    poly.setMap(map);
 }
 
-function parseData(url, array, connected, connectedPath, callback){
+
+function parseData(url, id, markerPositions, markerArray, polyline, callback){
     Papa.parse(url, {
         download: true,
         complete: function(results){
-            callback(results.data, array, connected, connectedPath);
             console.log(results.data);
+            callback(results.data, id, markerPositions, markerArray, polyline);
         }
     });
 }
 
-function addLine(connectedPath){
-    connectedPath.setMap(map);
-}
-
-function clearData(array) {
-    // console.log(array);
-    for (var i = 0; i < array.length; i++) {
-        array[i].setMap(null);
+function clearMarkers(markerArray) {
+    for (var i = 0; i < markerArray.length; i++) {
+        markerArray[i].setMap(null);
     }
-    array = [];
-    // array.length = 0;
 }
 
-function removeMarkersAndLines(route, secondRoute, pathRoute, secondPathRoute){
-    clearData(route);
-    clearData(secondRoute);
-    pathRoute.setMap(null);
-    secondPathRoute.setMap(null);
-}
-
-// parseData("data/route57_stops.csv", map);
-
-// list of checkbox listeners for each route
 $('#route1').change(function() {
     if($('#route1').prop("checked")) {
-        // run the function with the csv and a callback
-        // pathRoute1 = [];
-        // secondPathRoute1 = [];
-        parseData("data/15-key-bus-routes/route1/stops.txt", route1, connectedCoordinatesRoute1, pathRoute1, createMarker);
-        parseData("data/15-key-bus-routes/route1/stops.txt", secondRoute1, secondConnectedCoordinatesRoute1, secondPathRoute1, createMarker2);
+        parseData("data/15-key-bus-routes/route1/stops.txt", "route1", markerPositions1, markerArray1, polyline1, createMarker);//actualMarker1, content1, infoWindows1, createMarker);
     }
     else{
-        removeMarkersAndLines(route1, secondRoute1, pathRoute1, secondPathRoute1);
+        clearMarkers(markerArray1);
+        markerPositions1 = [];
+        markerArray1 = [];
+        polyline1.setMap(null);
+        //actualMarker1 = [];
+        //content1 = [];
+        //infoWindows1 = [];
     }
 });
 
 $('#route15').change(function() {
     if($('#route15').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route15/stops.txt", route15, connectedCoordinatesRoute15, pathRoute15, createMarker);
-        parseData("data/15-key-bus-routes/route15/stops.txt", secondRoute15, secondConnectedCoordinatesRoute15, secondPathRoute15, createMarker2);
+        parseData("data/15-key-bus-routes/route15/stops.txt", "route15", markerPositions15, markerArray15, polyline15, createMarker);//actualMarker15, content15, infoWindows15, createMarker);
     }
     else{
-        removeMarkersAndLines(route15, secondRoute15, pathRoute15, secondPathRoute15);
+        clearMarkers(markerArray15);
+        markerPositions15 = [];
+        markerArray15 = [];
+        polyline15.setMap(null);
+        //actualMarker15 = [];
+        //content15 = [];
+        //infoWindows15 = [];
     }
 });
 
 $('#route22').change(function() {
     if($('#route22').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route22/stops.txt", route22, connectedCoordinatesRoute22, pathRoute22, createMarker);
-        parseData("data/15-key-bus-routes/route22/stops.txt", secondRoute22, secondConnectedCoordinatesRoute22, secondPathRoute22, createMarker2);
+       parseData("data/15-key-bus-routes/route22/stops.txt", "route22", markerPositions22, markerArray22, polyline22, createMarker);
     }
     else{
-        removeMarkersAndLines(route22, secondRoute22, pathRoute22, secondPathRoute22);
+        clearMarkers(markerArray22);
+        markerPositions22 = [];
+        markerArray22 = [];
+        polyline22.setMap(null);
     }
 });
 
 $('#route23').change(function() {
     if($('#route23').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route23/stops.txt", route23, connectedCoordinatesRoute23, pathRoute23, createMarker);
-        parseData("data/15-key-bus-routes/route23/stops.txt", secondRoute23, secondConnectedCoordinatesRoute23, secondPathRoute23, createMarker2);
+        parseData("data/15-key-bus-routes/route23/stops.txt", "route23", markerPositions23, markerArray23, polyline23, createMarker);
     }
     else{
-        removeMarkersAndLines(route23, secondRoute23, pathRoute23, secondPathRoute23);
+        clearMarkers(markerArray23);
+        markerPositions23 = [];
+        markerArray23 = [];
+        polyline23.setMap(null);
     }
 });
 
 $('#route28').change(function() {
     if($('#route28').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route28/stops.txt", route28, connectedCoordinatesRoute28, pathRoute28, createMarker);
-        parseData("data/15-key-bus-routes/route28/stops.txt", secondRoute28, secondConnectedCoordinatesRoute28, secondPathRoute28, createMarker2);
+        parseData("data/15-key-bus-routes/route28/stops.txt", "route28", markerPositions28, markerArray28, polyline28, createMarker);
     }
     else{
-        removeMarkersAndLines(route28, secondRoute28, pathRoute28, secondPathRoute28);
+        clearMarkers(markerArray28);
+        markerPositions28 = [];
+        markerArray28 = [];
+        polyline28.setMap(null);
     }
 });
 
-$('#route57').change(function() {
-    if($('#route57').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route57/stops.txt", route57, connectedCoordinatesRoute57, pathRoute57, createMarker);
-        parseData("data/15-key-bus-routes/route57/stops.txt", secondRoute57, secondConnectedCoordinatesRoute57, secondPathRoute57, createMarker2);
-    }
-    else{
-        removeMarkersAndLines(route57, secondRoute57, pathRoute57, secondPathRoute57);
-    }
-});
-
-
-// Yue's data files
 $('#route32').change(function() {
     if($('#route32').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route32/stops.txt", route32, connectedCoordinatesRoute32, pathRoute32, createMarker);
-        parseData("data/15-key-bus-routes/route32/stops.txt", secondRoute32, secondConnectedCoordinatesRoute32, secondPathRoute1, createMarker2);
+        parseData("data/15-key-bus-routes/route32/stops.txt", "route32", markerPositions32, markerArray32, polyline32, createMarker);
     }
     else{
-        removeMarkersAndLines(route32, secondRoute32, pathRoute32, secondPathRoute32);
+        clearMarkers(markerArray32);
+        markerPositions32 = [];
+        markerArray32 = [];
+        polyline32.setMap(null);
     }
 });
 
 $('#route39').change(function() {
     if($('#route39').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route39/stops.txt", route39, connectedCoordinatesRoute39, pathRoute39, createMarker);
-        parseData("data/15-key-bus-routes/route39/stops.txt", secondRoute39, secondConnectedCoordinatesRoute39, secondPathRoute39, createMarker2);
+        parseData("data/15-key-bus-routes/route39/stops.txt", "route39", markerPositions39, markerArray39, polyline39, createMarker);
     }
     else{
-        removeMarkersAndLines(route39, secondRoute39, pathRoute39, secondPathRoute39);
+        clearMarkers(markerArray39);
+        markerPositions39 = [];
+        markerArray39 = [];
+        polyline39.setMap(null);
+    }
+});
+
+$('#route57').change(function() {
+    if($('#route57').prop("checked")) {
+        parseData("data/15-key-bus-routes/route57/stops.txt", "route57", markerPositions57, markerArray57, polyline57, createMarker);
+    }
+    else{
+        clearMarkers(markerArray57);
+        markerPositions57 = [];
+        markerArray57 = [];
+        polyline57.setMap(null);
     }
 });
 
 $('#route66').change(function() {
     if($('#route66').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route66/stops.txt", route66, connectedCoordinatesRoute66, pathRoute66, createMarker);
-        parseData("data/15-key-bus-routes/route66/stops.txt", secondRoute66, secondConnectedCoordinatesRoute66, secondPathRoute66, createMarker2);
+        parseData("data/15-key-bus-routes/route66/stops.txt", "route66", markerPositions66, markerArray66, polyline66, createMarker);
     }
     else{
-        removeMarkersAndLines(route66, secondRoute66, pathRoute66, secondPathRoute66);
+        clearMarkers(markerArray66);
+        markerPositions66 = [];
+        markerArray66 = [];
+        polyline66.setMap(null);
     }
 });
 
 $('#route71').change(function() {
     if($('#route71').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route71/stops.txt", route71, connectedCoordinatesRoute71, pathRoute71, createMarker);
-        parseData("data/15-key-bus-routes/route71/stops.txt", secondRoute71, secondConnectedCoordinatesRoute71, secondPathRoute71, createMarker2);
+        parseData("data/15-key-bus-routes/route71/stops.txt", "route71", markerPositions71, markerArray71, polyline71, createMarker);
     }
     else{
-        removeMarkersAndLines(route71, secondRoute71, pathRoute71, secondPathRoute71);
+        clearMarkers(markerArray71);
+        markerPositions71 = [];
+        markerArray71 = [];
+        polyline71.setMap(null);
     }
 });
 
 $('#route73').change(function() {
     if($('#route73').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route73/stops.txt", route73, connectedCoordinatesRoute73, pathRoute73, createMarker);
-        parseData("data/15-key-bus-routes/route73/stops.txt", secondRoute73, secondConnectedCoordinatesRoute73, secondPathRoute73, createMarker2);
+        parseData("data/15-key-bus-routes/route73/stops.txt", "route73", markerPositions73, markerArray73, polyline73, createMarker);
     }
     else{
-        removeMarkersAndLines(route73, secondRoute73, pathRoute73, secondPathRoute73);
+        clearMarkers(markerArray73);
+        markerPositions73 = [];
+        markerArray73 = [];
+        polyline73.setMap(null);
     }
 });
 
 $('#route77').change(function() {
     if($('#route77').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route77/stops.txt", route77, connectedCoordinatesRoute77, pathRoute77, createMarker);
-        parseData("data/15-key-bus-routes/route77/stops.txt", secondRoute77, secondConnectedCoordinatesRoute77, secondPathRoute77, createMarker2);
+        parseData("data/15-key-bus-routes/route77/stops.txt", "route77", markerPositions77, markerArray77, polyline77, createMarker);
     }
     else{
-        removeMarkersAndLines(route77, secondRoute77, pathRoute77, secondPathRoute77);
+        clearMarkers(markerArray77);
+        markerPositions77 = [];
+        markerArray77 = [];
+        polyline77.setMap(null);
     }
 });
 
 $('#route111').change(function() {
     if($('#route111').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route111/stops.txt", route111, connectedCoordinatesRoute111, pathRoute111, createMarker);
-        parseData("data/15-key-bus-routes/route111/stops.txt", secondRoute111, secondConnectedCoordinatesRoute111, secondPathRoute111, createMarker2);
+        parseData("data/15-key-bus-routes/route111/stops.txt", "route111", markerPositions111, markerArray111, polyline111, createMarker);
     }
     else{
-        removeMarkersAndLines(route111, secondRoute111, pathRoute111, secondPathRoute111);
+        clearMarkers(markerArray111);
+        markerPositions111 = [];
+        markerArray111 = [];
+        polyline111.setMap(null);
     }
 });
 
 $('#route116').change(function() {
     if($('#route116').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route116/stops.txt", route116, connectedCoordinatesRoute116, pathRoute116, createMarker);
-        parseData("data/15-key-bus-routes/route116/stops.txt", secondRoute116, secondConnectedCoordinatesRoute116, secondPathRoute116, createMarker2);
+        parseData("data/15-key-bus-routes/route116/stops.txt", "route116", markerPositions116, markerArray116, polyline116, createMarker);
     }
     else{
-        removeMarkersAndLines(route116, secondRoute116, pathRoute116, secondPathRoute116);
+        clearMarkers(markerArray116);
+        markerPositions116 = [];
+        markerArray116 = [];
+        polyline116.setMap(null);
     }
 });
 
 $('#route117').change(function() {
     if($('#route117').prop("checked")) {
-        // run the function with the csv and a callback
-        parseData("data/15-key-bus-routes/route117/stops.txt", route117, connectedCoordinatesRoute117, pathRoute117, createMarker);
-        parseData("data/15-key-bus-routes/route117/stops.txt", secondRoute117, secondConnectedCoordinatesRoute117, secondPathRoute117, createMarker2);
+        parseData("data/15-key-bus-routes/route117/stops.txt", "route117", markerPositions117, markerArray117, polyline117, createMarker);
     }
     else{
-        removeMarkersAndLines(route117, secondRoute117, pathRoute117, secondPathRoute117);
+        clearMarkers(markerArray117);
+        markerPositions117 = [];
+        markerArray117 = [];
+        polyline117.setMap(null);
     }
 });
 

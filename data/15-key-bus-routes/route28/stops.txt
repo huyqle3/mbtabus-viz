@@ -35,8 +35,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 1720,Blue Hill Ave @ Mattapan Sq,42.268761,-71.093956
 1721,Blue Hill Ave @ River St,42.267151,-71.093620
 18511,Mattapan Station - South Busway,42.267762,-71.092241
-17861,Ruggles Sta - Upper Level,42.336377,-71.088961
-11719,Blue Hill Ave opp Babson St,42.270168,-71.093910
-1720,Blue Hill Ave @ Mattapan Sq,42.268761,-71.093956
-1721,Blue Hill Ave @ River St,42.267151,-71.093620
-18511,Mattapan Station - South Busway,42.267762,-71.092241

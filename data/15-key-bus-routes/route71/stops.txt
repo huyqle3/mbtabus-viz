@@ -22,4 +22,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 2073,Mt Auburn St @ Brewer St,42.373955,-71.124748
 2074,Mt Auburn St @ University Rd,42.373356,-71.123230
 20761,Harvard Upper Busway @ Red Line,42.373362,-71.118956
-8178,Watertown Sq Terminal,42.365437,-71.185501

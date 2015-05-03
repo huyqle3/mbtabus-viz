@@ -1,4 +1,7 @@
 stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
+15100,St Peters Sq @ Church,42.308102,-71.064369,15100
+14731,Bowdoin St @ Adams St,42.308937,-71.064049
+1474,Bowdoin St @ Winter St,42.310207,-71.062683
 1475,Hancock St @ Bowdoin St,42.311317,-71.062660
 1478,Hancock St @ Rowell St,42.312675,-71.064484
 1479,Hancock St @ Jerome  St,42.314911,-71.065811
@@ -20,33 +23,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 21148,Malcolm X Blvd @ Tremont St,42.331345,-71.093315
 1224,Tremont St opp Prentiss St,42.332706,-71.092346
 17861,Ruggles Sta - Upper Level,42.336377,-71.088961
-14731,Bowdoin St @ Adams St,42.308937,-71.064049
-1474,Bowdoin St @ Winter St,42.310207,-71.062683
-1475,Hancock St @ Bowdoin St,42.311317,-71.062660
-1478,Hancock St @ Rowell St,42.312675,-71.064484
-1479,Hancock St @ Jerome  St,42.314911,-71.065811
-1480,Columbia Rd @ Hancock St,42.316364,-71.065765
-1481,Dudley St @ Belden St,42.317532,-71.066086
-11482,Dudley St @ Clifton St,42.318783,-71.069145
-14831,Dudley St opp Howard Ave,42.320107,-71.071144
-1484,Dudley St @ E Cottage St,42.321419,-71.072136
-1485,Dudley St @ Langdon St,42.323849,-71.073929
-1486,Dudley St @ Magazine St,42.325142,-71.074806
-1487,Dudley St @ Hampden St,42.326244,-71.075409
-1488,Dudley St @ Adams St,42.327843,-71.077492
-1489,Dudley St @ Dearborn St,42.328522,-71.079124
-1491,Dudley St @ Warren St,42.328655,-71.082962
-64000,Dudley Station,42.329544,-71.083984
-1478,Hancock St @ Rowell St,42.312675,-71.064484
-1479,Hancock St @ Jerome  St,42.314911,-71.065811
-1480,Columbia Rd @ Hancock St,42.316364,-71.065765
-1481,Dudley St @ Belden St,42.317532,-71.066086
-11482,Dudley St @ Clifton St,42.318783,-71.069145
-14831,Dudley St opp Howard Ave,42.320107,-71.071144
-1484,Dudley St @ E Cottage St,42.321419,-71.072136
-1485,Dudley St @ Langdon St,42.323849,-71.073929
-1486,Dudley St @ Magazine St,42.325142,-71.074806
-1487,Dudley St @ Hampden St,42.326244,-71.075409
-1488,Dudley St @ Adams St,42.327843,-71.077492
-1489,Dudley St @ Dearborn St,42.328522,-71.079124
-1491,Dudley St @ Warren St,42.328655,-71.082962

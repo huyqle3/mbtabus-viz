@@ -24,9 +24,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 396,Warren St @ Moreland St,42.325733,-71.083237
 21151,Warren St @ Kearsarge Ave,42.327351,-71.083023
 64000,Dudley Station,42.329544,-71.083984
-485,Washington St @ Southern Ave,42.291447,-71.071762
-426,Talbot Ave @ Lithgow St,42.289944,-71.069977
-428,Talbot Ave @ Welles Ave,42.288963,-71.066971
-430,Talbot Ave @ Dorchester Ave,42.286037,-71.064499
-334,Ashmont Station,42.284652,-71.064489
-17861,Ruggles Sta - Upper Level,42.336377,-71.088961

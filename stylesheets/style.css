@@ -4,21 +4,46 @@ body {
   background: transparent;
 }
 
+#definitions{
+    color:#7A7A7A;
+}
+
+.definition-title{
+    color:#787878;
+    text-decoration: underline;
+}
+
 #authors{
     color:#999;
     font-weight:200
 }
 
+
 #about{
 	font-size: 18px;
 }
 
-.chart .axis path,
-.chart .axis line {
+.chart1 .axis path,
+.chart1 .axis line {
     fill: none;
     stroke: grey;
     stroke-width: 1;
     shape-rendering: crispEdges;
+}
+
+.chart2 .axis path,
+.chart2 .axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.percentage .axis path,
+.percentage .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
 }
 
 .input-color {

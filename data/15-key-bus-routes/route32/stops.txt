@@ -24,16 +24,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 56479,Hyde Park Ave @ Eldridge Rd,42.292343,-71.117622
 76479,Hyde Park Ave @ Walk Hill St,42.296074,-71.116081
 875,Forest Hills Station Lower Busway,42.300523,-71.113686
-6504,Hyde Park Ave @ Greenwood Ave,42.265987,-71.121170
-6505,Hyde Park Ave @ Westminster St,42.264118,-71.121460
-6507,Hyde Park Ave @ West St,42.261536,-71.122299
-6508,Hyde Park Ave opp Webster St,42.258968,-71.123474
-6509,Hyde Park Ave @ Grant Place,42.256718,-71.124008
-2819,Hyde Park Ave @ Pingree St,42.254742,-71.124397
-2818,Opp 1344 Hyde Park Ave - Blake Estates,42.252060,-71.125336
-22819,Hyde Park Ave @ Glenwood Ave,42.248646,-71.126945
-22818,Hyde Park Ave @ Reservation Rd,42.246479,-71.128708
-22821,1587 Hyde Park Ave,42.244495,-71.129662
-32818,1661 Hyde Park Ave,42.241730,-71.130753
-42818,Hyde Park Ave @ Milton St,42.239288,-71.132133
-42819,Hyde Park Ave @ Wolcott Square,42.237297,-71.131981

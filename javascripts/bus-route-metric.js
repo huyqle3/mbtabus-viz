@@ -10,7 +10,7 @@ $(function(){
 			// get values from FORM
 			var busRoute = $("select#busRoute").val();
 			var inOut = $("input[name=inOut]:checked").val();
-			var year = $("select#year").val();
+			// var year = $("select#year").val();
 			var month = $("select#month").val();
 			var metric = $("select#metric").val();
 
@@ -20,37 +20,65 @@ $(function(){
 				data: {
 					busRoute: busRoute,
 					inOut: inOut,
-					year: year,
+					// year: year,
 					month: month,
 					metric: metric
 				},
 				cache: false,
 				success: function(){
-					// Success message
+					// success message
 					clearAll();
-					$('#success').html("<p>Infomation is: " + busRoute + " " + inOut + " " + year + " " + month + " " + metric + '</p>');
-					console.log("../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
+					console.log("../../../mbta-busses-website/data/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
-						runTimeBar(busRoute, inOut, year, month, bar);
+						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
+							runTimeBar(busRoute, inOut, "2012", month, bar, "chart1", "success1");
+							runTimeBar(busRoute, inOut, "2013", month, bar, "chart2", "success2");
+						}else{
+							runTimeBar(busRoute, inOut, "2013", month, bar, "chart1", "success1");
+							runTimeBar(busRoute, inOut, "2014", month, bar, "chart2", "success2");
+						}
 					}else if(metric == "run-time-line"){
 						var line = metric.substring(0, 8);
-						runTimeLine(busRoute, inOut, year, month, line);
+						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
+							runTimeLine(busRoute, inOut, "2012", month, line, "chart1");
+							runTimeLine(busRoute, inOut, "2013", month, line, "chart2");
+						}else{
+							runTimeLine(busRoute, inOut, "2013", month, line, "chart1");
+							runTimeLine(busRoute, inOut, "2014", month, line, "chart2");
+						}
 					}else if(metric == "actual-vs-scheduled"){
-						actualVsScheduled(busRoute, inOut, year, month, metric);
+						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
+							actualVsScheduled(busRoute, inOut, "2012", month, metric, "chart1", "success1");
+							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart2", "success2");
+						}else{
+							actualVsScheduled(busRoute, inOut, "2013", month, metric, "chart1", "success1");
+							actualVsScheduled(busRoute, inOut, "2014", month, metric, "chart2", "success2");
+						}
 					}else if(metric == "headway"){
-						headway(busRoute, inOut, year, month, metric);
+						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
+							headway(busRoute, inOut, "2012", month, metric, "chart1", "success3");
+							headway(busRoute, inOut, "2013", month, metric, "chart2", "success4");
+						}else{
+							headway(busRoute, inOut, "2013", month, metric, "chart1", "success3");
+							headway(busRoute, inOut, "2014", month, metric, "chart2", "success4");
+						}
 					}else{
-						//console.log("wait-time");
-						waitTimeLine(busRoute, inOut, year, month, metric);
+						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
+							waitTimeLine(busRoute, inOut, "2012", month, metric, "chart1", "success3");
+							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart2", "success4");
+						}else{
+							waitTimeLine(busRoute, inOut, "2013", month, metric, "chart1", "success3");
+							waitTimeLine(busRoute, inOut, "2014", month, metric, "chart2", "success4");
+						}
 					}
-					// reposition();
 					// clear all fields
 					$('#routeForm').trigger("reset");
 				},
 				error: function() {
 					// Fail message
-					$('#success').html('ERROR');
+					$('#success1').html('ERROR');
+					$('#success2').html('ERROR');
 
 					//clear all fields
 					$('#routeForm').trigger("reset");
@@ -70,11 +98,16 @@ $(function(){
 });
 
 function clearAll(){
-	$("#success").empty();
-	$(".chart").empty();
+	$("#success1").empty();
+	$(".chart1").empty();
+	$("#success2").empty();
+	$(".chart2").empty();
+	$("#success3").empty();
+	$("#success4").empty();
 }
 
-function runTimeBar(busRoute, inOut, year, month, metric){
+function runTimeBar(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var width = 440,
     barHeight = 12;
@@ -82,8 +115,9 @@ function runTimeBar(busRoute, inOut, year, month, metric){
 	var x = d3.scale.linear()
 	    .range([0, width]);
 
-	var chart = d3.select(".chart")
-	    .attr("width", width);
+	var chart = d3.select("." + chartNumber).append("svg")
+	    .attr("width", width)
+	    .attr("class", "col-md-6");
 
 	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, type, function(error, data) {
@@ -119,10 +153,12 @@ function runTimeBar(busRoute, inOut, year, month, metric){
 	$("path").css("fill", "none");
 }
 
-function runTimeLine(busRoute, inOut, year, month, metric){
+function runTimeLine(busRoute, inOut, year, month, metric, chartNumber){
+	$('.' + chartNumber).html("<br><p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
+
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 1200 - margin.left - margin.right,
+    height = 460 - margin.top - margin.bottom;
 
 	var parseDate = d3.time.format("%H:%M").parse;
 
@@ -146,7 +182,7 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	    .x(function(d) { return x(d.date); })
 	    .y(function(d) { return y(d.close); });
 
-	var svg = d3.select(".chart")
+	var svg = d3.select("." + chartNumber).append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -187,20 +223,22 @@ function runTimeLine(busRoute, inOut, year, month, metric){
 	});
 }
 
-function actualVsScheduled(busRoute, inOut, year, month, metric){
+function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 	// var width = 2200, barHeight = 12;
-	var width = 1000, barHeight = 12;
+	var width = 500, barHeight = 12;
 
 	var x = d3.scale.linear()
 	    .range([0, width]);
 
-	var chart = d3.select(".chart")
-	    .attr("width", width);
+	var chart = d3.select("." + chartNumber).append("svg")
+	    .attr("width", width)
+	    .attr("class", "col-md-6");
 
 	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, type, function(error, data) {
-	  //x.domain([0, d3.max(data, function(d) { return d.close; })]);
-	  x.domain([0, 60]);
+	  x.domain([0, d3.max(data, function(d) { return d.close; })]);
+	  //x.domain([0, 20]);
 	  //d3.max(data, function(d) { return d.close; })]);
 
 	  chart.attr("height", barHeight * data.length);
@@ -232,10 +270,13 @@ function actualVsScheduled(busRoute, inOut, year, month, metric){
 }
 
 
-function waitTimeLine(busRoute, inOut, year, month, metric){
+function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Wait Time' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Wait Time' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
+	$('.' + chartNumber).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
+
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 1200 - margin.left - margin.right,
+    height = 460 - margin.top - margin.bottom;
 
 	var parseDate = d3.time.format("%H:%M").parse;
 
@@ -259,9 +300,13 @@ function waitTimeLine(busRoute, inOut, year, month, metric){
 
 	var line = d3.svg.line()
 	    .x(function(d) { return x(d.date); })
+	    .y(function(d) { return y(d.actual); });
+
+	var line2 = d3.svg.line()
+	    .x(function(d) { return x(d.date); })
 	    .y(function(d) { return y(d.close); });
 
-	var svg = d3.select(".line-chart").append("svg")
+	var svg = d3.select("." + chartNumber).append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -279,29 +324,44 @@ function waitTimeLine(busRoute, inOut, year, month, metric){
 
 	svg.append("g")
 	    .attr("class", "x axis")
+	    .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	    .attr("transform", "translate(0," + height + ")")
 	    .call(xAxis);
 
 	svg.append("g")
 	    .attr("class", "y axis")
+	    .style({"stroke-width": "0.1px", "stroke": "grey", "shape-rendering": "crispEdges"})
 	    .call(yAxis)
 	    .append("text")
 	    .attr("transform", "rotate(-90)")
 	    .attr("y", 10)
 	    .attr("dy", ".71em")
 	    .style("text-anchor", "end")
-	    .text("Avg Wait Time (mins)");
+	    .text("Avg Wait Time");
 
 	svg.append("path")
 	    .datum(data)
 	    .attr("class", "line")
-	    .attr("d", line);
+	    .attr("d", line)
+	    .attr("stroke-width", 2)
+		.attr("stroke", 'black')
+		.style("fill", "none");
+
+	svg.append("path")
+	    .datum(data)
+	    .attr("class", "line")
+	    .attr("d", line2)
+	    .style("stroke-dasharray", ("3, 3"))
+		.attr("stroke-width", 3)
+		.attr("stroke", 'red')
+		.style("fill", "none");
 	});
 }
 
 
-function headway(busRoute, inOut, year, month, metric){
-	$('#success').html("<div class='input-color'><input type='text' value='Average Actual Headway' style='width:200px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:200px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div>");
+function headway(busRoute, inOut, year, month, metric, chartNumber, success){
+	$('#' + success).html("<br><div class='input-color'><input type='text' value='Average Actual Headway' style='width:300px; text-align: center;'/><div class='color-box' style='background-color: #000000;'></div></div><div class='input-color'><input type='text' value='Average Scheduled Headway' style='width:300px; text-align: center;'/>    <div class='color-box' style='background-color: #FF0000;'></div></div><br>");
+	$('.' + chartNumber).html("<p>Date: " + month + ", " + year + "</p><p>Route: " + busRoute + " " + inOut + "</p><p>Metric: " + metric + "</p>");
 
 	var margin = {top: 20, right: 20, bottom: 20, left: 50},
     width = 1200 - margin.left - margin.right,
@@ -329,13 +389,12 @@ function headway(busRoute, inOut, year, month, metric){
 		
 	//Define the second line
 	var valueline2 = d3.svg.line()
-
 		.x(function(d) { 
 		if (d.AvgStartTime > 0 && d.AvgStartTime < 1439) { //Bound for end of this day (11:59pm = 1439 mins)
 		return x(d.mytime);} })
 	    .y(function(d) { return y(d.AvgSch); });
 		
-	var svg = d3.select(".chart")
+	var svg = d3.select("." + chartNumber).append("svg")
 	    .attr("width", width + margin.left + margin.right)
 	    .attr("height", height + margin.top + margin.bottom)
 	  .append("g")
@@ -426,5 +485,6 @@ function type(d) {
 
 /*Function to close out the graph. Not implemented at the moment */
 $('#name').focus(function() {
-    $('#success').html('');
+    $('#success1').html('');
+    $('#success2').html('');
 });
