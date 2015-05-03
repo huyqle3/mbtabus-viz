@@ -196,6 +196,7 @@ function parseData(url, id, markerPositions, markerArray, polyline, callback){
     Papa.parse(url, {
         download: true,
         complete: function(results){
+            console.log(results.data);
             callback(results.data, id, markerPositions, markerArray, polyline);
         }
     });
