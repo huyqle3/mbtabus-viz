@@ -24,14 +24,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 11323,Malcolm X Blvd opp O'Bryant HS,42.330605,-71.088417
 11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
 64000,Dudley Station,42.329544,-71.083984
-11323,Malcolm X Blvd opp O'Bryant HS,42.330605,-71.088417
-11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
-64000,Dudley Station,42.329544,-71.083984
-2560,N Harvard St @ Kingsley St,42.361893,-71.130333
-2561,N Harvard St @ Western Ave,42.363590,-71.129143
-2564,N Harvard St opp Harvard Stadium Gate 2,42.367081,-71.124825
-25641,JFK St @ Eliot St,42.371487,-71.120949
-2168,Massachusetts Ave @ Johnston Gate,42.375130,-71.118515
-22549,Harvard Sq @ Garden St - Dawes Island,42.375301,-71.119240
-11259,Malcolm X Blvd @ Shawmut Ave,42.329483,-71.086205
-64000,Dudley Station,42.329544,-71.083984

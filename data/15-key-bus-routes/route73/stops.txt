@@ -27,5 +27,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 2132,Trapleo Rd @ Hawthorne St,42.386486,-71.186333
 2133,Trapelo Rd @ Waverley St,42.387089,-71.188118
 2134,Church St @ Lexington St,42.387196,-71.190613
-20761,Harvard Upper Busway @ Red Line,42.373362,-71.118956
-12614,Waterhouse St @ Massachusetts Ave,42.377758,-71.120537

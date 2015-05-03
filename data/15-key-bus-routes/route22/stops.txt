@@ -29,6 +29,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 1222,Columbus Ave @ Malcolm X Blvd,42.331192,-71.094467
 1224,Tremont St opp Prentiss St,42.332706,-71.092346
 17861,Ruggles Sta - Upper Level,42.336377,-71.088961
-428,Talbot Ave @ Welles Ave,42.288963,-71.066971
-430,Talbot Ave @ Dorchester Ave,42.286037,-71.064499
-334,Ashmont Station,42.284652,-71.064489

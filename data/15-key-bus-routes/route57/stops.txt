@@ -31,7 +31,3 @@ stop_id,stop_name,stop_lat,stop_lon,stop_code,location_type,parent_station
 988,Centre St @ Jefferson St,42.358040,-71.184639
 989,Galen St @ Maple St,42.360081,-71.185333
 900,Watertown Yard,42.364307,-71.185699
-938,Commonwealth Ave @ St Marys St,42.349789,-71.106392
-939,Commonwealth Ave @ Hinsdale St,42.349396,-71.103058
-941,Commonwealth Ave @ Blandford St,42.348969,-71.099640
-899,Kenmore Station Busway,42.348949,-71.095169
