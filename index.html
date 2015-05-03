@@ -40,7 +40,8 @@
 
 	<div class="container" style="margin:50px; margin-bottom: 90px">
 		<p id="about">
-			Use MBTA-provided data to generate a comparison of on-time bus performance before and after the implementation of significant MBTA service changes that went into effect over the course of spring and summer 2013 (specific dates, by route, are available).
+			MBTA provided data for us to generate a comparison of on-time bus performance before and after the implementation of significant MBTA service changes that went into effect over the course of spring and summer 2013 (specific dates, by route, are available). <br>
+			We attempt to present a few visualization tools to help MBTA personnel and people in Boston help better understand the buses and how the change in routes has affected the performance of thoe buses.
 		</p>
 	</div>
 
@@ -49,7 +50,7 @@
 			<div class="col-md-7">
 				<h2>The Buses</h2>
 				<p id="about">
-					The big question is whether the MBTA key bus route changes during 2013 benefitted or hurt the on-time bus performance. The following tool provides the ability to compare metrics of the MBTA key bus routes with the corresponding previous or next year. Extra options allow for further customization.
+					MBTA implemented 15 key bus route changes during summer of 2013. The big question is whether those changes benefitted or hurt the on-time bus performance. To better understand how the Key Bus Route Program affected the busses, we produced visualizations on four key metrics: run time, actual vs scheduled times, headway, and wait times.
 				</p>
 			</div>
 			<div class="col-md-5">
@@ -64,9 +65,30 @@
 		</div>
 	</div>
 
+	<div class="container" style="margin:50px">
+		<div class = "row">
+			<div class = "col-md-9">
+				<h2>Late percentage</h2>
+				<p id="about">
+					The following graph provides a comparison of average late time percentages for buses on each of the key bus routes. The graph compares before (pre) and after (post) the Key Bus Route Program.
+				</p>
+			</div>
+		</div>
+		<br>
+		<div class ="percentage">
+		</div>
+	</div>
+
 	<section id="bus-route">
 		<div class ="container">
-			<h2>Metric comparison</h2>
+			<div class = "row">
+				<div class = "col-md-6">
+					<h2>Metric comparison</h2>
+					<p id="about">
+						The following tool provides a form to analyze data on the key metrics of choice. Submit the form and graphs will populate, providing a comparison between corresponding months in separate years for that metric.
+					</p>
+				</div>
+			</div>
 			</br>
 			<div class="row">
 				<div class="col-md-6">
@@ -174,6 +196,15 @@
 	</div>
 
 	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-8">
+				<h2>Map</h2>
+				<p id="about">
+					The following map provides a check-box tool to see where exactly are the 15 key bus routes. Check a box, and markers will populate that bus route.
+				</p>
+			</div>
+		</div>
+		<br>
     	<div class = "row">
       		<div class = "col-md-8">
         		<div id="map-canvas"></div>   
@@ -283,5 +314,6 @@
     <script src = "javascripts/papaparse.min.js"></script>
   	<script src = "javascripts/bus-map.js"></script>
 
+  	<script src = "javascripts/percentage-late.js"></script>
 </body>
 </html>

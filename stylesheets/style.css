@@ -29,6 +29,13 @@ body {
     shape-rendering: crispEdges;
 }
 
+.percentage .axis path,
+.percentage .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
 .input-color {
     position: relative;
 }
