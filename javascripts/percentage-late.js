@@ -76,7 +76,7 @@ d3.csv(path, function(error, data) {
       .style("fill", function(d) { return color(d.name); });
 
   var legend = svg.selectAll(".legend")
-      .data(routeNames.slice().reverse())
+      .data(routeNames.slice())
     .enter().append("g")
       .attr("class", "legend")
       .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
