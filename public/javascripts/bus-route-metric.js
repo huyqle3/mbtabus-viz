@@ -15,7 +15,7 @@ $(function(){
 			var metric = $("select#metric").val();
 
 			$.ajax({
-				url: "http://localhost:80/mbta-busses-website/public/server-side/bus-route-form.php",
+				url: "http://huyle.me/mbta-busses-website/public/server-side/bus-route-form.php",
 				type: "POST",
 				data: {
 					busRoute: busRoute,
