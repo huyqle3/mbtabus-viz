@@ -6,7 +6,7 @@ var User = require('../models/user');
 module.exports = function(passport){
 	
 	/* GET Login page. */
-	router.get('/mbta', function(req, res, next) {
+	router.get('/', function(req, res, next) {
 	  res.render('index', { title: 'Login', message: req.flash('loginMessage') });
 	});
 

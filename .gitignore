@@ -29,3 +29,5 @@ node_modules
 database
 
 db.js
+
+nohup.out
