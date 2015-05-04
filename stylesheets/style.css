@@ -4,6 +4,11 @@ body {
   background: transparent;
 }
 
+img .image-analysis{
+    display: block;
+    margin: auto;
+}
+
 #definitions{
     color:#7A7A7A;
 }
@@ -13,9 +18,13 @@ body {
     text-decoration: underline;
 }
 
+.subtitle{
+    color:#787878;
+}
+
 #authors{
     color:#999;
-    font-weight:200
+    font-weight:200;
 }
 
 
