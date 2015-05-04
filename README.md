@@ -11,27 +11,27 @@ The website runs on a Node.js server on MongoDB. The site uses jQuery, AJAX, d3.
 
 Install Node and Mongodb
 ```
-sudo apt-get -y install nodejs npm install nodejs-legacy mongodb
+sudo apt-get -y install npm nodejs nodejs-legacy mongodb
 ```
 Clone source code from git repository anywhere
 ```
-git clone https://github.com/ataturk/mbta-busses-website.git
+sudo git clone https://github.com/ataturk/mbta-busses-website.git
 ```
 Change directory into mbta-busses-website folder
 ```
 cd mbta-busses-website
 ```
-Install node modules
+Install node modules of the project
 ```
-npm install
+sudo npm install
 ```
 Make database folder and run mongodb on 1 terminal
 ```
 mkdir database
-mongodb --dbpath database
+sudo mongod --dbpath database
 ```
-On a 2nd terminal, start node
+On a 2nd terminal, start nodejs
 ```
-npm start
+sudo npm start
 ```
-Since we have the site private, you'll have to use mongodb to create a user and password. You can visit the site at http://localhost:3000.
+Since we have the site private, you'll have to use mongodb to create a user and password. You can visit the site at http://localhost:3000 after starting up nodejs.
