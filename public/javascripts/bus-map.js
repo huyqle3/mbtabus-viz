@@ -210,7 +210,7 @@ function clearMarkers(markerArray) {
 
 $('#route1').change(function() {
     if($('#route1').prop("checked")) {
-        parseData("data/15-key-bus-routes/route1/stops.txt", "route1", markerPositions1, markerArray1, polyline1, createMarker);//actualMarker1, content1, infoWindows1, createMarker);
+        parseData("/data/15-key-bus-routes/route1/stops.txt", "route1", markerPositions1, markerArray1, polyline1, createMarker);//actualMarker1, content1, infoWindows1, createMarker);
     }
     else{
         clearMarkers(markerArray1);
@@ -225,7 +225,7 @@ $('#route1').change(function() {
 
 $('#route15').change(function() {
     if($('#route15').prop("checked")) {
-        parseData("data/15-key-bus-routes/route15/stops.txt", "route15", markerPositions15, markerArray15, polyline15, createMarker);//actualMarker15, content15, infoWindows15, createMarker);
+        parseData("/data/15-key-bus-routes/route15/stops.txt", "route15", markerPositions15, markerArray15, polyline15, createMarker);//actualMarker15, content15, infoWindows15, createMarker);
     }
     else{
         clearMarkers(markerArray15);
@@ -240,7 +240,7 @@ $('#route15').change(function() {
 
 $('#route22').change(function() {
     if($('#route22').prop("checked")) {
-       parseData("data/15-key-bus-routes/route22/stops.txt", "route22", markerPositions22, markerArray22, polyline22, createMarker);
+       parseData("/data/15-key-bus-routes/route22/stops.txt", "route22", markerPositions22, markerArray22, polyline22, createMarker);
     }
     else{
         clearMarkers(markerArray22);
@@ -252,7 +252,7 @@ $('#route22').change(function() {
 
 $('#route23').change(function() {
     if($('#route23').prop("checked")) {
-        parseData("data/15-key-bus-routes/route23/stops.txt", "route23", markerPositions23, markerArray23, polyline23, createMarker);
+        parseData("/data/15-key-bus-routes/route23/stops.txt", "route23", markerPositions23, markerArray23, polyline23, createMarker);
     }
     else{
         clearMarkers(markerArray23);
@@ -264,7 +264,7 @@ $('#route23').change(function() {
 
 $('#route28').change(function() {
     if($('#route28').prop("checked")) {
-        parseData("data/15-key-bus-routes/route28/stops.txt", "route28", markerPositions28, markerArray28, polyline28, createMarker);
+        parseData("/data/15-key-bus-routes/route28/stops.txt", "route28", markerPositions28, markerArray28, polyline28, createMarker);
     }
     else{
         clearMarkers(markerArray28);
@@ -276,7 +276,7 @@ $('#route28').change(function() {
 
 $('#route32').change(function() {
     if($('#route32').prop("checked")) {
-        parseData("data/15-key-bus-routes/route32/stops.txt", "route32", markerPositions32, markerArray32, polyline32, createMarker);
+        parseData("/data/15-key-bus-routes/route32/stops.txt", "route32", markerPositions32, markerArray32, polyline32, createMarker);
     }
     else{
         clearMarkers(markerArray32);
@@ -288,7 +288,7 @@ $('#route32').change(function() {
 
 $('#route39').change(function() {
     if($('#route39').prop("checked")) {
-        parseData("data/15-key-bus-routes/route39/stops.txt", "route39", markerPositions39, markerArray39, polyline39, createMarker);
+        parseData("/data/15-key-bus-routes/route39/stops.txt", "route39", markerPositions39, markerArray39, polyline39, createMarker);
     }
     else{
         clearMarkers(markerArray39);
@@ -300,7 +300,7 @@ $('#route39').change(function() {
 
 $('#route57').change(function() {
     if($('#route57').prop("checked")) {
-        parseData("data/15-key-bus-routes/route57/stops.txt", "route57", markerPositions57, markerArray57, polyline57, createMarker);
+        parseData("/data/15-key-bus-routes/route57/stops.txt", "route57", markerPositions57, markerArray57, polyline57, createMarker);
     }
     else{
         clearMarkers(markerArray57);
@@ -312,7 +312,7 @@ $('#route57').change(function() {
 
 $('#route66').change(function() {
     if($('#route66').prop("checked")) {
-        parseData("data/15-key-bus-routes/route66/stops.txt", "route66", markerPositions66, markerArray66, polyline66, createMarker);
+        parseData("/data/15-key-bus-routes/route66/stops.txt", "route66", markerPositions66, markerArray66, polyline66, createMarker);
     }
     else{
         clearMarkers(markerArray66);
@@ -324,7 +324,7 @@ $('#route66').change(function() {
 
 $('#route71').change(function() {
     if($('#route71').prop("checked")) {
-        parseData("data/15-key-bus-routes/route71/stops.txt", "route71", markerPositions71, markerArray71, polyline71, createMarker);
+        parseData("/data/15-key-bus-routes/route71/stops.txt", "route71", markerPositions71, markerArray71, polyline71, createMarker);
     }
     else{
         clearMarkers(markerArray71);
@@ -336,7 +336,7 @@ $('#route71').change(function() {
 
 $('#route73').change(function() {
     if($('#route73').prop("checked")) {
-        parseData("data/15-key-bus-routes/route73/stops.txt", "route73", markerPositions73, markerArray73, polyline73, createMarker);
+        parseData("/data/15-key-bus-routes/route73/stops.txt", "route73", markerPositions73, markerArray73, polyline73, createMarker);
     }
     else{
         clearMarkers(markerArray73);
@@ -348,7 +348,7 @@ $('#route73').change(function() {
 
 $('#route77').change(function() {
     if($('#route77').prop("checked")) {
-        parseData("data/15-key-bus-routes/route77/stops.txt", "route77", markerPositions77, markerArray77, polyline77, createMarker);
+        parseData("/data/15-key-bus-routes/route77/stops.txt", "route77", markerPositions77, markerArray77, polyline77, createMarker);
     }
     else{
         clearMarkers(markerArray77);
@@ -360,7 +360,7 @@ $('#route77').change(function() {
 
 $('#route111').change(function() {
     if($('#route111').prop("checked")) {
-        parseData("data/15-key-bus-routes/route111/stops.txt", "route111", markerPositions111, markerArray111, polyline111, createMarker);
+        parseData("/data/15-key-bus-routes/route111/stops.txt", "route111", markerPositions111, markerArray111, polyline111, createMarker);
     }
     else{
         clearMarkers(markerArray111);
@@ -372,7 +372,7 @@ $('#route111').change(function() {
 
 $('#route116').change(function() {
     if($('#route116').prop("checked")) {
-        parseData("data/15-key-bus-routes/route116/stops.txt", "route116", markerPositions116, markerArray116, polyline116, createMarker);
+        parseData("/data/15-key-bus-routes/route116/stops.txt", "route116", markerPositions116, markerArray116, polyline116, createMarker);
     }
     else{
         clearMarkers(markerArray116);
@@ -384,7 +384,7 @@ $('#route116').change(function() {
 
 $('#route117').change(function() {
     if($('#route117').prop("checked")) {
-        parseData("data/15-key-bus-routes/route117/stops.txt", "route117", markerPositions117, markerArray117, polyline117, createMarker);
+        parseData("/data/15-key-bus-routes/route117/stops.txt", "route117", markerPositions117, markerArray117, polyline117, createMarker);
     }
     else{
         clearMarkers(markerArray117);

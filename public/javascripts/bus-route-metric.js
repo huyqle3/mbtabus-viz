@@ -15,7 +15,7 @@ $(function(){
 			var metric = $("select#metric").val();
 
 			$.ajax({
-				url: "../../../mbta-busses-website/server-side/bus-route-form.php",
+				url: "http://localhost:80/mbta-busses-website/public/server-side/bus-route-form.php",
 				type: "POST",
 				data: {
 					busRoute: busRoute,
@@ -28,7 +28,7 @@ $(function(){
 				success: function(){
 					// success message
 					clearAll();
-					console.log("../../../mbta-busses-website/data/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
+					console.log("/data/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv");
 					if(metric == "run-time-bar"){
 						var bar = metric.substring(0, 8);
 						if(month == "July" || month == "August" || month == "September" || month == "October" || month == "November" || month == "December"){
@@ -119,7 +119,7 @@ function runTimeBar(busRoute, inOut, year, month, metric, chartNumber, success){
 	    .attr("width", width)
 	    .attr("class", "col-md-6");
 
-	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
+	var path = "/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, type, function(error, data) {
 	  x.domain([0, d3.max(data, function(d) { return d.close; })]);
 
@@ -188,7 +188,7 @@ function runTimeLine(busRoute, inOut, year, month, metric, chartNumber){
 	  .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
+	var path = "/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, function(error, data) {
 	  data.forEach(function(d) {
 	    d.date = parseDate(d.date);
@@ -235,7 +235,7 @@ function actualVsScheduled(busRoute, inOut, year, month, metric, chartNumber, su
 	    .attr("width", width)
 	    .attr("class", "col-md-6");
 
-	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
+	var path = "/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, type, function(error, data) {
 	  x.domain([0, d3.max(data, function(d) { return d.close; })]);
 	  //x.domain([0, 20]);
@@ -312,7 +312,7 @@ function waitTimeLine(busRoute, inOut, year, month, metric, chartNumber, success
 	  .append("g")
 	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
+	var path = "/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".tsv";
 	d3.tsv(path, function(error, data) {
 	  data.forEach(function(d) {
 	    d.date = parseDate(d.date);
@@ -409,7 +409,7 @@ function headway(busRoute, inOut, year, month, metric, chartNumber, success){
 	var HMtime = d3.time.format("%H:%M");
 
 	//Retrieve the data
-	var path = "../../../mbta-busses-website/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".csv";
+	var path = "/data/" + year + "/" + month + "/" + metric + "/" + busRoute + "-" + inOut + ".csv";
 	d3.csv(path, function(error, data) {
 	  data.forEach(function(d) {
 	  d.AvgStartTime = +d.AvgStartTime; //Set this to StartTimeInMin before we convert it

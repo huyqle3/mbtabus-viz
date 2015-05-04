@@ -27,7 +27,7 @@ var svg = d3.select(".percentage").append("svg")
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-var path = "../../../mbta-busses-website/data/percentage-late/percentageprepost.csv";
+var path = "/data/percentage-late/percentageprepost.csv";
 d3.csv(path, function(error, data) {
   var routeNames = d3.keys(data[0]).filter(function(key) { return key !== "RouteName"; });
 
