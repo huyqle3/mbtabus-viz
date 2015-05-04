@@ -1,22 +1,37 @@
 # mbta-busses-website
 
-### Deployment
-This project contains two main components, one of which is data analysis with Apache Pig, another is an UI tool to display the analysis result. This file is to introduce how to deploy the website on an apache web server.
+### MBTA Bus Performance website
+The MBTA implemented 15 key bus route changes during the spring and summer of 2013. The big question is whether those changes benefited or hurt the on-time bus performance. To better understand how the Key Bus Route Program affected the buses, we produced visualizations on four key metrics: run time, actual vs scheduled times, headway, and wait times.
 
-Install Apache2 Server on Ubuntu/Debian 
+### URL
+http://huyle.me:8080
+
+### Deployment
+The website runs on a Node.js server on MongoDB. The site uses jQuery, AJAX, d3.js, a bit of PHP, etc.
+
+Install Node and Mongodb
 ```
-sudo apt-get -y install apache2
+sudo apt-get -y install nodejs npm install nodejs-legacy mongodb
 ```
-Install Apache Httpd Server on Centos
+Clone source code from git repository anywhere
 ```
-sudo yum -y install httpd
+git clone https://github.com/ataturk/mbta-busses-website.git
 ```
-Clone source code from git repository
+Change directory into mbta-busses-website folder
 ```
-git clone https://github.com/BU-EC500-SP15/mbta-busses-website.git
+cd mbta-busses-website
 ```
-Deploy the website by copying files to /var/www/html/
+Install node modules
 ```
-cp -r mbta-busses-website /var/www/html/
+npm install
 ```
-Once it's done, visit the address: http://127.0.0.1/mbta-busses-website. Then, you will be forwarded to the homepage of our website tool.
+Make database folder and run mongodb on 1 terminal
+```
+mkdir database
+mongodb --dbpath database
+```
+On a 2nd terminal, start node
+```
+npm start
+```
+Since we have the site private, you'll have to use mongodb to create a user and password. You can visit the site at http://localhost:3000.
