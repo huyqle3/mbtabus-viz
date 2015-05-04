@@ -31,3 +31,4 @@ database
 db.js
 
 nohup.out
+npm-debug.out
