@@ -10,10 +10,14 @@ module.exports = function(passport){
 	  res.render('index', { title: 'Login', message: req.flash('loginMessage') });
 	});
 
+	router.get('/login', function(req, res){
+		res.redirect('/');	
+	});
+
 	/* Login POST */
 	router.post('/login', passport.authenticate('login', {
 		successRedirect:'/buses',
-		falureRedirect:'/',
+		falureRedirect:'/login',
 		falureFlash : true
 	}));
 
