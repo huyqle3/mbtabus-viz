@@ -3,9 +3,9 @@
 ### Deployment
 This project contains two main components, one of which is data analysis with Apache Pig, another is an UI tool to display the analysis result. This file is to introduce how to deploy the website on an apache web server.
 
-1) Install Apache Server
-2) Clone git repo
-3) Copy git repo as /var/www/html
+1. Install Apache Server
+2. Clone git repo
+3. Copy git repo as /var/www/html
 
 ### Install Apache2 Server on Ubuntu/Debian 
 ```
